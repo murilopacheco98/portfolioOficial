@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { FaReact } from "react-icons/fa";
@@ -42,7 +42,7 @@ export const Abas = (props: AbaProps) => {
               navigate(aba ? aba?.link : "");
             }}
             className={
-              path == aba?.urlName
+              path === aba?.urlName
                 ? "h-[35px] flex items-center px-[10px] border-t-[1.5px] border-pink-400 py-[3px]"
                 : `h-[35px] flex items-center cursor-pointer px-[14px] ${textColor} ${textHover} bg-[#070419 ${color} py-[3px]`
             }
@@ -59,7 +59,7 @@ export const Abas = (props: AbaProps) => {
             </div>
             <div
               onClick={(e) => {
-                if (path == aba?.urlName) {
+                if (path === aba?.urlName) {
                   if (abasPage.length === 1) {
                     navigate("/");
                   } else if (abasPage[index]?.id !== abasPage[abasPage.length]?.id) {
@@ -77,7 +77,7 @@ export const Abas = (props: AbaProps) => {
             >
               <p
                 className={
-                  path == aba?.urlName
+                  path === aba?.urlName
                     ? `hover:bg-white opacity-100 mb-[3px] hover:bg-opacity-10 py-[0px] px-[5px]`
                     : `hover:bg-white mb-[3px] hover:bg-opacity-10 py-[0px] px-[5px]`
                 }

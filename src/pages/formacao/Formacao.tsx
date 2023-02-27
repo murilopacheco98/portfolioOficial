@@ -1,5 +1,4 @@
-import { light } from "@mui/material/styles/createPalette";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Abas } from "../../components/Abas";
 import { Sidebar } from "../../components/Sidebar";
 import { useAppSelector } from "../../store/hooks";
@@ -11,7 +10,7 @@ export const Formacao = () => {
   const light = Object.values(useAppSelector((store) => store.toggle.entities));
 
   return (
-    <div className="flex">
+    <div className="flex ">
       <Sidebar
         explorer={explorer}
         setExplorer={setExplorer}
@@ -53,9 +52,9 @@ export const Formacao = () => {
           <div className="flex h-[150px] lg:h-[200px] justify-center">
             <img
               src={require("../../assets/growdev.png")}
-              style={{ border: "2px" }}
+              alt="logo da growdev"
             />
-            <img src={require("../../assets/ufgd.png")} />
+            <img src={require("../../assets/ufgd.png")} alt="logo da ufgd" />
           </div>
         </div>
       )}
@@ -92,8 +91,11 @@ export const Formacao = () => {
             análise da mecânica dos fluidos.
           </div>
           <div className="flex h-[150px] lg:h-[200px] justify-center">
-            <img src={require("../../assets/growdev.png")} />
-            <img src={require("../../assets/ufgd.png")} />
+            <img
+              src={require("../../assets/growdev.png")}
+              alt="logo da growdev"
+            />
+            <img src={require("../../assets/ufgd.png")} alt="logo da ufgd" />
           </div>
         </div>
       )}

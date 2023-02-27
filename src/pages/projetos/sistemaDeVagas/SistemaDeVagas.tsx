@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Abas } from "../../../components/Abas";
 import { Sidebar } from "../../../components/Sidebar";
-import { useAppSelector } from "../../../store/hooks";
 
 export const SistemaDeVagas = () => {
   const [on, setOn] = useState<boolean>();

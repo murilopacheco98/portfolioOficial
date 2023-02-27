@@ -1,7 +1,7 @@
-import React, { SetStateAction, useEffect, useState } from "react";
-import { VscSourceControl, VscFolderOpened } from "react-icons/vsc";
+import React, { SetStateAction, useEffect } from "react";
+import { VscSourceControl } from "react-icons/vsc";
 import { FiGithub } from "react-icons/fi";
-import { FaLinkedinIn, FaReact } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { IoMdCopy } from "react-icons/io";
 import { Tooltip } from "@mui/material";
@@ -29,13 +29,13 @@ export const Links = (props: LinksProps) => {
   useEffect(() => {
     if (toggle[2]) {
       setExplorer && setExplorer(false);
-      if (toggle[2].on == true) {
+      if (toggle[2].on === true) {
         setExplorer && setExplorer(true);
       }
     } else {
       dispatch(addToggle({ uid: 3, on: false }));
     }
-  }, [explorer]);
+  }, [explorer, toggle, setExplorer, dispatch]);
 
   const explorerOn = () => {
     dispatch(
@@ -82,14 +82,22 @@ export const Links = (props: LinksProps) => {
           )}
           <div>
             <Tooltip title="Código do projeto" placement="right">
-              <a href="https://github.com/murilopacheco98" target="_blank">
+              <a
+                href="https://github.com/murilopacheco98"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div className="flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
                   <VscSourceControl />
                 </div>
               </a>
             </Tooltip>
             <Tooltip title="Me encontre no Github" placement="right">
-              <a href="https://github.com/murilopacheco98" target="_blank">
+              <a
+                href="https://github.com/murilopacheco98"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div className="flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
                   <FiGithub />
                 </div>
@@ -99,14 +107,19 @@ export const Links = (props: LinksProps) => {
               <a
                 href="https://www.linkedin.com/in/murilo-pacheco-037ba316b/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <div className="cursor-pointer flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
                   <FaLinkedinIn />
                 </div>
               </a>
             </Tooltip>
-            <Tooltip title="Contacte me via e-mail"  placement="right">
-              <a href="mailto:murilo.pacheco99@gmail.com" target="_blank">
+            <Tooltip title="Contacte me via e-mail" placement="right">
+              <a
+                href="mailto:murilo.pacheco99@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div className="flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
                   <HiOutlineMail />
                 </div>
@@ -117,7 +130,11 @@ export const Links = (props: LinksProps) => {
       ) : (
         <div className="flex w-[180px] sm:w-[230px] justify-between text-[38px] sm:text-[44px] lg:text-[54px]">
           <Tooltip title="Me encontre no Github">
-            <a href="https://github.com/murilopacheco98" target="_blank">
+            <a
+              href="https://github.com/murilopacheco98"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className="flex justify-center py-[12px] text-gray-500 hover:text-gray-300">
                 <FiGithub />
               </div>
@@ -127,6 +144,7 @@ export const Links = (props: LinksProps) => {
             <a
               href="https://www.linkedin.com/in/murilo-pacheco-037ba316b/"
               target="_blank"
+              rel="noreferrer"
             >
               <div className="cursor-pointer flex justify-center py-[12px] text-gray-500 hover:text-gray-300">
                 <FaLinkedinIn />
@@ -134,7 +152,11 @@ export const Links = (props: LinksProps) => {
             </a>
           </Tooltip>
           <Tooltip title="Contacte me via e-mail">
-            <a href="mailto:murilo.pacheco99@gmail.com" target="_blank">
+            <a
+              href="mailto:murilo.pacheco99@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className="flex justify-center py-[12px] text-gray-500 hover:text-gray-300">
                 <HiOutlineMail />
               </div>

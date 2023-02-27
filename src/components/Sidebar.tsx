@@ -37,7 +37,7 @@ export const Sidebar = (props: SidebarProps) => {
   useEffect(() => {
     if (toggle[0]) {
       setOn(false);
-      if (toggle[0].on == true) {
+      if (toggle[0].on === true) {
         setOn(true);
       }
     } else {
@@ -45,13 +45,13 @@ export const Sidebar = (props: SidebarProps) => {
     }
     if (toggle[1]) {
       setProjects(false);
-      if (toggle[1].on == true) {
+      if (toggle[1].on === true) {
         setProjects(true);
       }
     } else {
       dispatch(addToggle({ uid: 2, on: false }));
     }
-  }, [on, projects]);
+  }, [on, projects, toggle, setOn, dispatch]);
 
   const lightOn = () => {
     dispatch(
