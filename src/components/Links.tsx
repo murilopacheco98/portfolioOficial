@@ -33,7 +33,7 @@ export const Links = (props: LinksProps) => {
         setExplorer && setExplorer(true);
       }
     } else {
-      dispatch(addToggle({ uid: 3, on: false }));
+      dispatch(addToggle({ uid: 3, on: true }));
     }
   }, [explorer, toggle, setExplorer, dispatch]);
 
@@ -74,7 +74,7 @@ export const Links = (props: LinksProps) => {
             <Tooltip title="Explorer" placement="right">
               <div
                 onClick={() => explorerOn()}
-                className="cursor-pointer w-[47px] text-white flex justify-center text-[28px] py-[12px]"
+                className="cursor-pointer w-[47px] text-gray-500 hover:text-gray-300 flex justify-center text-[28px] py-[12px]"
               >
                 <IoMdCopy />
               </div>
