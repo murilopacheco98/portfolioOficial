@@ -15,8 +15,14 @@ export const Geral = () => {
         on={on}
       />
       {on && (
-        <div className="overflow-y-scroll h-[calc(100vh-25px)] mt-[25px] bg-opacity-[1%] bg-[#070419] w-[calc(100vw-200px)]">
-          <Abas />
+        <div
+          className={
+            explorer
+              ? "overflow-y-scroll relative mt-[25px] bg-opacity-[1%] h-[calc(100vh-25px)] bg-[#070419] w-[calc(100vw-200px)]"
+              : "overflow-y-scroll ml-[47px] relative mt-[25px] bg-opacity-[1%] h-[calc(100vh-25px)] bg-[#070419] w-[calc(100vw-47px)]"
+          }
+        >
+          <Abas light={on} />
           <div className="font-semibold flex justify-center mt-[20px] mb-[10px] text-[20px]">
             Sobre mim
           </div>
@@ -114,8 +120,14 @@ export const Geral = () => {
         </div>
       )}
       {!on && (
-        <div className="overflow-y-scroll h-[calc(100vh-25px)] mt-[25px] text-white bg-opacity-95 bg-[#070419] w-[calc(100vw-200px)]">
-          <Abas />
+        <div
+          className={
+            explorer
+              ? "overflow-y-scroll text-white relative mt-[25px] bg-opacity-[95%] h-[calc(100vh-25px)] bg-[#070419] w-[calc(100vw-200px)]"
+              : "overflow-y-scroll ml-[47px] text-white relative mt-[25px] bg-opacity-[95%] h-[calc(100vh-25px)] bg-[#070419] w-[calc(100vw-47px)]"
+          }
+        >
+          <Abas light={on} />
           <div className="flex justify-center pt-[20px] mb-[10px] text-[20px]">
             Sobre mim
           </div>

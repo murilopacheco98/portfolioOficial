@@ -62,7 +62,7 @@ export const Links = (props: LinksProps) => {
       {sidebar ? (
         <div>
           {explorer ? (
-            <Tooltip title="Explorer">
+            <Tooltip title="Explorer" placement="right">
               <div
                 onClick={() => explorerOff()}
                 className="cursor-pointer w-[47px] bg-gray-800 text-white border-l-[2px] border-pink-400 flex justify-center text-[28px] py-[12px]"
@@ -71,7 +71,7 @@ export const Links = (props: LinksProps) => {
               </div>
             </Tooltip>
           ) : (
-            <Tooltip title="Explorer">
+            <Tooltip title="Explorer" placement="right">
               <div
                 onClick={() => explorerOn()}
                 className="cursor-pointer w-[47px] text-white flex justify-center text-[28px] py-[12px]"
@@ -81,21 +81,21 @@ export const Links = (props: LinksProps) => {
             </Tooltip>
           )}
           <div>
-            <Tooltip title="Código do projeto">
+            <Tooltip title="Código do projeto" placement="right">
               <a href="https://github.com/murilopacheco98" target="_blank">
                 <div className="flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
                   <VscSourceControl />
                 </div>
               </a>
             </Tooltip>
-            <Tooltip title="Me encontre no Github">
+            <Tooltip title="Me encontre no Github" placement="right">
               <a href="https://github.com/murilopacheco98" target="_blank">
                 <div className="flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
                   <FiGithub />
                 </div>
               </a>
             </Tooltip>
-            <Tooltip title="Me encontre no Linkedin">
+            <Tooltip title="Me encontre no Linkedin" placement="right">
               <a
                 href="https://www.linkedin.com/in/murilo-pacheco-037ba316b/"
                 target="_blank"
@@ -105,7 +105,7 @@ export const Links = (props: LinksProps) => {
                 </div>
               </a>
             </Tooltip>
-            <Tooltip title="Contacte me via e-mail">
+            <Tooltip title="Contacte me via e-mail"  placement="right">
               <a href="mailto:murilo.pacheco99@gmail.com" target="_blank">
                 <div className="flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
                   <HiOutlineMail />

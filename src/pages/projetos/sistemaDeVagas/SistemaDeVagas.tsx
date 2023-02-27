@@ -17,9 +17,14 @@ export const SistemaDeVagas = () => {
       />
       {on && (
         <>
-          <div className="bg-opacity-[1%] ml-[200px] h-[calc(100vh-25px)] bg-[#070419] w-[calc(100vw-200px)] absolute"></div>
-          <div className="overflow-y-scroll relative mt-[25px] ">
-            <Abas />
+          <div
+            className={
+              explorer
+                ? "overflow-y-scroll relative mt-[25px] bg-opacity-[1%] h-[calc(100vh-25px)] bg-[#070419] w-[calc(100vw-200px)]"
+                : "overflow-y-scroll ml-[47px] relative mt-[25px] bg-opacity-[1%] h-[calc(100vh-25px)] bg-[#070419] w-[calc(100vw-47px)]"
+            }
+          >
+            <Abas light={on} />
             <div className="font-semibold flex justify-center mt-[20px] mb-[20px] text-[24px]">
               Sistema de vagas
             </div>
@@ -61,7 +66,7 @@ export const SistemaDeVagas = () => {
               : "overflow-y-scroll ml-[47px] text-white relative mt-[25px] bg-opacity-[95%] h-[calc(100vh-25px)] bg-[#070419] w-[calc(100vw-47px)]"
           }
         >
-          <Abas />
+          <Abas light={on} />
           <div className="font-semibold flex justify-center mt-[20px] mb-[20px] text-[24px]">
             Sistema de vagas
           </div>

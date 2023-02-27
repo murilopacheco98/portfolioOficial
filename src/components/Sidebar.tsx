@@ -94,7 +94,14 @@ export const Sidebar = (props: SidebarProps) => {
   };
 
   const abaPage = (input: AbaPageProps) => {
-    dispatch(addPage({ id: input.id, name: input.name, urlName: input.urlName, link: input.link }));
+    dispatch(
+      addPage({
+        id: input.id,
+        name: input.name,
+        urlName: input.urlName,
+        link: input.link,
+      })
+    );
   };
 
   return (
@@ -105,7 +112,7 @@ export const Sidebar = (props: SidebarProps) => {
       <div className="absolute mt-[25px] w-[47px] pb-[10px] flex flex-col justify-between h-[calc(100vh-25px)] bg-opacity-[90%] bg-[#070419]">
         <Links sidebar explorer={explorer} setExplorer={setExplorer} />
         <div className="">
-          <Tooltip title="Ligue a luz">
+          <Tooltip title="Ligue a luz" placement="right">
             <div
               onClick={() => {
                 on ? lightOff() : lightOn();
@@ -115,7 +122,7 @@ export const Sidebar = (props: SidebarProps) => {
               {on ? <BsFillSunFill /> : <BsSun />}
             </div>
           </Tooltip>
-          <Tooltip title="Decoração">
+          <Tooltip title="Decoração" placement="right">
             <div className="cursor-pointer flex justify-center text-[28px] py-[12px] text-gray-500 hover:text-gray-300">
               <IoSettingsOutline />
             </div>

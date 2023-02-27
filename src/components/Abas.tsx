@@ -4,10 +4,15 @@ import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { FaReact } from "react-icons/fa";
 import { removePage } from "../store/modules/abaPage/AbaPageSlice";
 
-export const Abas = () => {
+interface AbaProps {
+  light: boolean | undefined;
+}
+
+export const Abas = (props: AbaProps) => {
+  const { light } = props;
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  // const [selected, setSelected] = useState<boolean>();
+
   const url = useLocation();
   let path = "";
   if (url.pathname.split("/")[2]) {
@@ -15,6 +20,9 @@ export const Abas = () => {
   } else {
     path = url.pathname.split("/")[1];
   }
+  const color = light ? "bg-slate-200" : "bg-[#070419]";
+  const textColor = light ? "text-slate-200" : "text-[#070419]";
+  const textHover = light ? "hover:text-[#070419]" : "hover:text-slate-200";
 
   const abasPage = Object.values(
     useAppSelector((store) => store.abaPage.entities)
@@ -25,7 +33,7 @@ export const Abas = () => {
   };
 
   return (
-    <div className="w-[100%] h-[50px] overflow-scroll flex">
+    <div className="w-[100%] h-[50px] overflow-hidden  hover:overflow-x-scroll flex">
       {abasPage[0] !== undefined &&
         abasPage.map((aba, index) => (
           <div
@@ -36,19 +44,25 @@ export const Abas = () => {
             className={
               path == aba?.urlName
                 ? "h-[35px] flex items-center px-[10px] border-t-[1.5px] border-pink-400 py-[3px]"
-                : "h-[35px] flex items-center cursor-pointer px-[14px] text-[#070419] hover:text-white bg-[#070419] py-[3px] text-blue"
+                : `h-[35px] flex items-center cursor-pointer px-[14px] ${textColor} ${textHover} bg-[#070419 ${color} py-[3px]`
             }
           >
             <div className="text-blue-500 mr-[5px]">
               <FaReact />
             </div>
-            <div className="mr-[5px] text-green-400 ">{aba?.name}</div>
+            <div
+              className={
+                light ? "mr-[5px] text-green-600" : "mr-[5px] text-green-400"
+              }
+            >
+              {aba?.name}
+            </div>
             <div
               onClick={(e) => {
                 if (path == aba?.urlName) {
                   if (abasPage.length === 1) {
                     navigate("/");
-                  } else if (abasPage[index]?.id !== aba.id) {
+                  } else if (abasPage[index]?.id !== abasPage[abasPage.length]?.id) {
                     const link = abasPage[index + 1]?.link;
                     navigate(link ? link : "/");
                   } else {
@@ -61,7 +75,13 @@ export const Abas = () => {
               }}
               className="flex justify-end cursor-pointer text-[18px] py-[0px]"
             >
-              <p className="hover:bg-white mb-[3px] hover:bg-opacity-10 py-[0px] px-[5px]">
+              <p
+                className={
+                  path == aba?.urlName
+                    ? `hover:bg-white opacity-100 mb-[3px] hover:bg-opacity-10 py-[0px] px-[5px]`
+                    : `hover:bg-white mb-[3px] hover:bg-opacity-10 py-[0px] px-[5px]`
+                }
+              >
                 x
               </p>
             </div>

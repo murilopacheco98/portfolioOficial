@@ -11,10 +11,21 @@ export const MarvelApi = () => {
 
   return (
     <div className="flex">
-      <Sidebar explorer={explorer} setExplorer={setExplorer} setOn={setOn} on={on} />
+      <Sidebar
+        explorer={explorer}
+        setExplorer={setExplorer}
+        setOn={setOn}
+        on={on}
+      />
       {on && (
-        <div className="overflow-y-scroll h-[calc(100vh-25px)] mt-[25px] bg-opacity-[1%] bg-[#070419] w-[calc(100vw-200px)]">
-          <Abas />
+        <div
+          className={
+            explorer
+              ? "overflow-y-scroll relative mt-[25px] bg-opacity-[1%] h-[calc(100vh-25px)] bg-[#070419] w-[calc(100vw-200px)]"
+              : "overflow-y-scroll ml-[47px] relative mt-[25px] bg-opacity-[1%] h-[calc(100vh-25px)] bg-[#070419] w-[calc(100vw-47px)]"
+          }
+        >
+          <Abas light={on} />
           <div className="font-semibold flex justify-center mt-[20px] mb-[20px] text-[24px]">
             Marvel API
           </div>
@@ -23,8 +34,8 @@ export const MarvelApi = () => {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este projeto foi realizado
               utilizando a api disponibilizada pela marvel, no qual ela permite
               acessar os dados da maioria do universo marvel, porém neste
-              projeto foram utilizadas apenas informações a respeito os
-              heróis, quadrinhos, eventos, criadores.
+              projeto foram utilizadas apenas informações a respeito os heróis,
+              quadrinhos, eventos, criadores.
             </div>
             <br />
             <div>
@@ -39,8 +50,14 @@ export const MarvelApi = () => {
         </div>
       )}
       {!on && light[0] !== undefined && (
-        <div className="overflow-y-scroll h-[calc(100vh-25px)] mt-[25px] text-white bg-opacity-95 bg-[#070419] w-[calc(100vw-200px)]">
-          <Abas />
+        <div
+          className={
+            explorer
+              ? "overflow-y-scroll text-white relative mt-[25px] bg-opacity-[95%] h-[calc(100vh-25px)] bg-[#070419] w-[calc(100vw-200px)]"
+              : "overflow-y-scroll ml-[47px] text-white relative mt-[25px] bg-opacity-[95%] h-[calc(100vh-25px)] bg-[#070419] w-[calc(100vw-47px)]"
+          }
+        >
+          <Abas light={on} />
           <div className="font-semibold flex justify-center mt-[20px] mb-[20px] text-[20px]">
             Marvel API
           </div>
