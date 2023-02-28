@@ -30,6 +30,14 @@ export const MarvelApi = () => {
             Marvel API
           </div>
           <div className="mb-[40px] font-light mx-[5vw] lg:ml-[10vw] lg:mr-[12vw] text-[16px] lg:text-[18px] text-justify">
+            Link do projeto:
+            <a
+              href="https://marvelmundo.netlify.app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              marvelmundo.netlify.app
+            </a>
             <div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este projeto foi realizado
               utilizando a api disponibilizada pela marvel, no qual ela permite
@@ -62,12 +70,22 @@ export const MarvelApi = () => {
             Marvel API
           </div>
           <div className="mb-[40px] font-light mx-[5vw] lg:ml-[10vw] lg:mr-[12vw] text-[16px] lg:text-[18px] text-justify">
-            <div>
+            <div className="mb-[10px]">
+              Link do projeto: &nbsp;
+              <a
+                href="https://marvelmundo.netlify.app"
+                target="_blank"
+                rel="noreferrer"
+                className="underline text-blue-400 hover:text-blue-500"
+              >
+                marvelmundo.netlify.app
+              </a>
+            </div>
+            <div className="mb-[10px]">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este projeto foi realizado
               utilizando a api disponibilizada pela marvel, no qual ela permite
               acessar os dados sobre os heróis, quadrinhos, eventos, criadores.
             </div>
-            <br />
             <div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Após clicar nos cards de entrada que
               encaminham para uma seção, que possui tudo daquela seção separada
