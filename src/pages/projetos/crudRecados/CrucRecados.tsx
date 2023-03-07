@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Carousel } from "react-bootstrap";
 import { Abas } from "../../../components/Abas";
 import { Sidebar } from "../../../components/Sidebar";
 import { useAppSelector } from "../../../store/hooks";
@@ -36,14 +37,80 @@ export const CrudRecados = () => {
               está com botao para ver ou esconder. O sistema possui authorização
               e authenticação de acesso.
             </div>
-            <br />
+            <div className="flex justify-center">
+              <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                <Carousel fade variant="dark">
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem1.JPG")}
+                      alt="Login"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem2.JPG")}
+                      alt="Cadastro"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem3.JPG")}
+                      alt="1"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem4.JPG")}
+                      alt="2"
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
+            </div>
             <div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O crud possui as 4 operações em
               todos os recados, o create, read, update e delete. O create e o
               update estão em um modal e o read está direcionado para os recados
               do usuário.
             </div>
-            <br />
+            <div className="flex justify-center">
+              <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                <Carousel fade variant="dark">
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem5.JPG")}
+                      alt="3"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem6.JPG")}
+                      alt="4"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem7.JPG")}
+                      alt="5"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem8.JPG")}
+                      alt="6"
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
+            </div>
             <div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Além disso possui a barra de
               pesquisa de recados e a paginação do material UI. A pesquisa é
@@ -71,14 +138,80 @@ export const CrudRecados = () => {
               está com botao para ver ou esconder. O sistema possui authorização
               e authenticação de acesso.
             </div>
-            <br />
+            <div className="flex justify-center">
+              <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                <Carousel fade variant="dark">
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem1.JPG")}
+                      alt="Login"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem2.JPG")}
+                      alt="Cadastro"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem3.JPG")}
+                      alt="1"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem4.JPG")}
+                      alt="2"
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
+            </div>
             <div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O crud possui as 4 operações em
               todos os recados, o create, read, update e delete. O create e o
               update estão em um modal e o read está direcionado para os recados
               do usuário.
             </div>
-            <br />
+            <div className="flex justify-center">
+              <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                <Carousel fade variant="dark">
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem5.JPG")}
+                      alt="3"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem6.JPG")}
+                      alt="4"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem7.JPG")}
+                      alt="5"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/crudRecados/Imagem8.JPG")}
+                      alt="6"
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
+            </div>
             <div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Além disso possui a barra de
               pesquisa de recados e a paginação do material UI. A pesquisa é

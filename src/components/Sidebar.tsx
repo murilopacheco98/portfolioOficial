@@ -137,7 +137,7 @@ export const Sidebar = (props: SidebarProps) => {
                 EXPLORER
               </div>
             </div>
-            <div className="w-[155px] bg-opacity-[5%] bg-black">
+            <div className="w-[155px] border-r-[2px] bg-slate-50">
               <div
                 onClick={() => {
                   setPortfolio(!porfolio);
@@ -303,7 +303,7 @@ export const Sidebar = (props: SidebarProps) => {
                 EXPLORER
               </div>
             </div>
-            <div className="w-[155px] bg-opacity-[6%] bg-white">
+            <div className="w-[155px] bg-opacity-[5%] bg-[#ffffff]">
               <div
                 onClick={(e) => {
                   setPortfolio(!porfolio);
@@ -324,7 +324,7 @@ export const Sidebar = (props: SidebarProps) => {
                     onClick={() => {
                       projects ? projectOff() : projectOn();
                     }}
-                    className="hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white ml-[5px] "
+                    className="hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white"
                   >
                     <div className="ml-[13px] mr-[5px]">
                       {projects ? <SlArrowDown /> : <SlArrowRight />}
@@ -347,7 +347,7 @@ export const Sidebar = (props: SidebarProps) => {
                             link: "/projetos/clinica",
                           });
                         }}
-                        className="pl-[17px] hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white ml-[5px] "
+                        className="pl-[17px] hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white"
                       >
                         <div className="ml-[20px] text-[15px] text-blue-500 mr-[5px]">
                           <FaReact />
@@ -364,7 +364,7 @@ export const Sidebar = (props: SidebarProps) => {
                             link: "/projetos/crud-recados",
                           });
                         }}
-                        className="pl-[17px] hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white ml-[5px] "
+                        className="pl-[17px] hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white"
                       >
                         <div className="ml-[20px] text-[15px] text-blue-500 mr-[5px]">
                           <FaReact />
@@ -381,7 +381,7 @@ export const Sidebar = (props: SidebarProps) => {
                             link: "/projetos/marvel-api",
                           });
                         }}
-                        className="pl-[17px] hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white ml-[5px] "
+                        className="pl-[17px] hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white"
                       >
                         <div className="ml-[20px] text-[15px] text-blue-500 mr-[5px]">
                           <FaReact />
@@ -398,7 +398,7 @@ export const Sidebar = (props: SidebarProps) => {
                             link: "/projetos/sistema-de-vagas",
                           });
                         }}
-                        className="pl-[17px] hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white ml-[5px] "
+                        className="pl-[17px] hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white"
                       >
                         <div className="ml-[20px] text-[15px] text-blue-500 mr-[5px]">
                           <FaReact />
@@ -417,7 +417,7 @@ export const Sidebar = (props: SidebarProps) => {
                         link: "/geral",
                       });
                     }}
-                    className="hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white ml-[5px] "
+                    className="hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white"
                   >
                     <div className="ml-[26px] text-[15px] text-blue-500 mr-[5px]">
                       <FaReact />
@@ -434,7 +434,7 @@ export const Sidebar = (props: SidebarProps) => {
                         link: "/conhecimentos",
                       });
                     }}
-                    className="hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white ml-[5px] "
+                    className="hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white"
                   >
                     <div className="ml-[26px] text-[15px] text-blue-500 mr-[5px]">
                       <FaReact />
@@ -451,7 +451,7 @@ export const Sidebar = (props: SidebarProps) => {
                         link: "/formacao",
                       });
                     }}
-                    className="hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white ml-[5px] "
+                    className="hover:bg-gray-800 cursor-pointer text-[12px] flex items-center h-[25px] text-white"
                   >
                     <div className="ml-[26px] text-[15px] text-blue-500 mr-[5px]">
                       <FaReact />

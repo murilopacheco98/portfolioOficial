@@ -62,7 +62,7 @@ export const Abas = (props: AbaProps) => {
                 if (path === aba?.urlName) {
                   if (abasPage.length === 1) {
                     navigate("/");
-                  } else if (abasPage[index]?.id !== abasPage[abasPage.length]?.id) {
+                  } else if (abasPage[index]?.id !== abasPage[abasPage.length - 1]?.id) {
                     const link = abasPage[index + 1]?.link;
                     navigate(link ? link : "/");
                   } else {

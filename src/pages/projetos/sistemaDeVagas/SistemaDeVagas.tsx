@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Carousel } from "react-bootstrap";
 import { Abas } from "../../../components/Abas";
 import { Sidebar } from "../../../components/Sidebar";
 
@@ -33,7 +34,26 @@ export const SistemaDeVagas = () => {
                 login. O cadastro está com formik e yup para validações. O
                 sistema possui authorização e autenticação de acesso.
               </div>
-              <br />
+              <div className="flex justify-center">
+                <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                  <Carousel fade>
+                    <Carousel.Item interval={5000}>
+                      <img
+                        className="d-block h-[400px]"
+                        src={require("../../../assets/sistemaDeVagas/Imagem1.JPG")}
+                        alt="Login"
+                      />
+                    </Carousel.Item>
+                    <Carousel.Item interval={5000}>
+                      <img
+                        className="d-block h-[400px]"
+                        src={require("../../../assets/sistemaDeVagas/Imagem2.JPG")}
+                        alt="Cadastro"
+                      />
+                    </Carousel.Item>
+                  </Carousel>
+                </div>
+              </div>
               <div>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No geral o projeto é composto por
                 3 roles: candidato, parceiro e o adm. No qual o candidato tem a
@@ -41,17 +61,111 @@ export const SistemaDeVagas = () => {
                 candidatar nelas, após isso ele pode ver as vagas em que se
                 candidatou.
               </div>
-              <br />
+              <div className="flex justify-center">
+                <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                  <Carousel fade>
+                    <Carousel.Item interval={5000}>
+                      <img
+                        className="d-block h-[400px]"
+                        src={require("../../../assets/sistemaDeVagas/Imagem3.JPG")}
+                        alt="candidato 1"
+                      />
+                    </Carousel.Item>
+                    <Carousel.Item interval={5000}>
+                      <img
+                        className="d-block h-[400px]"
+                        src={require("../../../assets/sistemaDeVagas/Imagem4.JPG")}
+                        alt="candidato 2"
+                      />
+                    </Carousel.Item>
+                    <Carousel.Item interval={5000}>
+                      <img
+                        className="d-block h-[400px]"
+                        src={require("../../../assets/sistemaDeVagas/Imagem5.JPG")}
+                        alt="candidato 3"
+                      />
+                    </Carousel.Item>
+                    <Carousel.Item interval={5000}>
+                      <img
+                        className="d-block h-[400px]"
+                        src={require("../../../assets/sistemaDeVagas/Imagem6.JPG")}
+                        alt="candidato 4"
+                      />
+                    </Carousel.Item>
+                    <Carousel.Item interval={5000}>
+                      <img
+                        className="d-block h-[400px]"
+                        src={require("../../../assets/sistemaDeVagas/Imagem8.JPG")}
+                        alt="candidato 6"
+                      />
+                    </Carousel.Item>
+                    <Carousel.Item interval={5000}>
+                      <img
+                        className="d-block h-[400px]"
+                        src={require("../../../assets/sistemaDeVagas/Imagem9.JPG")}
+                        alt="candidato 7"
+                      />
+                    </Carousel.Item>
+                  </Carousel>
+                </div>
+              </div>
               <div>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A role parceiro consegue subir as
                 vagas na aplicação, gerencia-las e ver quem se candidatou nelas,
                 junto com os dados para contato.
               </div>
+              <div className="flex justify-center">
+                <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                  <Carousel fade>
+                    <Carousel.Item interval={5000}>
+                      <img
+                        className="d-block h-[400px]"
+                        src={require("../../../assets/sistemaDeVagas/ImagemParceiro1.JPG")}
+                        alt="Login"
+                      />
+                    </Carousel.Item>
+                    <Carousel.Item interval={5000}>
+                      <img
+                        className="d-block h-[400px]"
+                        src={require("../../../assets/sistemaDeVagas/ImagemParceiro2.JPG")}
+                        alt="Cadastro"
+                      />
+                    </Carousel.Item>
+                  </Carousel>
+                </div>
+              </div>
               <div>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A role adm tem uma visão geral da
-                aplicação para controle e monitoramento. Além de fazer o
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A role admin tem uma visão geral
+                da aplicação para controle e monitoramento. Além de fazer o
                 gerenciamento da aplicação: as vagas, empresas parceiras,
                 candidatos e parceiros.
+              </div>
+              <div className="flex justify-center">
+                <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                  <Carousel fade>
+                    <Carousel.Item interval={5000}>
+                      <img
+                        className="d-block h-[400px]"
+                        src={require("../../../assets/sistemaDeVagas/ImagemAdmin1.JPG")}
+                        alt="admin 3"
+                      />
+                    </Carousel.Item>
+                    <Carousel.Item interval={5000}>
+                      <img
+                        className="d-block h-[400px]"
+                        src={require("../../../assets/sistemaDeVagas/ImagemAdmin2.JPG")}
+                        alt="admin 2"
+                      />
+                    </Carousel.Item>
+                    <Carousel.Item interval={5000}>
+                      <img
+                        className="d-block h-[400px]"
+                        src={require("../../../assets/sistemaDeVagas/ImagemAdmin3.JPG")}
+                        alt="admin 3"
+                      />
+                    </Carousel.Item>
+                  </Carousel>
+                </div>
               </div>
             </div>
           </div>
@@ -75,7 +189,26 @@ export const SistemaDeVagas = () => {
               login. O cadastro está com formik e yup para validações. O sistema
               possui authorização e autenticação de acesso.
             </div>
-            <br />
+            <div className="flex justify-center">
+              <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                <Carousel fade>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/sistemaDeVagas/Imagem1.JPG")}
+                      alt="Login"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/sistemaDeVagas/Imagem2.JPG")}
+                      alt="Cadastro"
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
+            </div>
             <div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No geral o projeto é composto por 3
               roles: candidato, parceiro e o adm. No qual o candidato tem a
@@ -83,17 +216,111 @@ export const SistemaDeVagas = () => {
               candidatar nelas, após isso ele pode ver as vagas em que se
               candidatou.
             </div>
-            <br />
+            <div className="flex justify-center">
+              <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                <Carousel fade>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/sistemaDeVagas/Imagem3.JPG")}
+                      alt="candidato 1"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/sistemaDeVagas/Imagem4.JPG")}
+                      alt="candidato 2"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/sistemaDeVagas/Imagem5.JPG")}
+                      alt="candidato 3"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/sistemaDeVagas/Imagem6.JPG")}
+                      alt="candidato 4"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/sistemaDeVagas/Imagem8.JPG")}
+                      alt="candidato 6"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/sistemaDeVagas/Imagem9.JPG")}
+                      alt="candidato 7"
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
+            </div>
             <div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A role parceiro consegue subir as
               vagas na aplicação, gerencia-las e ver quem se candidatou nelas,
               junto com os dados para contato.
+            </div>
+            <div className="flex justify-center">
+              <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                <Carousel fade>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/sistemaDeVagas/ImagemParceiro1.JPG")}
+                      alt="Login"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/sistemaDeVagas/ImagemParceiro2.JPG")}
+                      alt="Cadastro"
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
             </div>
             <div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A role adm tem uma visão geral da
               aplicação para controle e monitoramento. Além de fazer o
               gerenciamento da aplicação: as vagas, empresas parceiras,
               candidatos e parceiros.
+            </div>
+            <div className="flex justify-center">
+              <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                <Carousel fade>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/sistemaDeVagas/ImagemAdmin1.JPG")}
+                      alt="admin 3"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/sistemaDeVagas/ImagemAdmin2.JPG")}
+                      alt="admin 2"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/sistemaDeVagas/ImagemAdmin3.JPG")}
+                      alt="admin 3"
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Abas } from "../../../components/Abas";
 import { Sidebar } from "../../../components/Sidebar";
 import { useAppSelector } from "../../../store/hooks";
+import Carousel from "react-bootstrap/Carousel";
 
 export const MarvelApi = () => {
   const [on, setOn] = useState<boolean>();
@@ -45,7 +46,26 @@ export const MarvelApi = () => {
               projeto foram utilizadas apenas informações a respeito os heróis,
               quadrinhos, eventos, criadores.
             </div>
-            <br />
+            <div className="flex justify-center">
+              <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                <Carousel fade>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/marvelApi/Imagem1.JPG")}
+                      alt="Página de entrada"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/marvelApi/Imagem2.JPG")}
+                      alt="Menu"
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
+            </div>
             <div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Após clicar nos cards de entrada, o
               usuário é direcionado para para uma seção, que possui tudo daquela
@@ -53,6 +73,33 @@ export const MarvelApi = () => {
               o que a api disponibiliza a respeito deles. Ao clicar no card do
               herói ele mostra informações mais específicas sobre ele. Além
               disso é possível pesquisar o herói que deseja.
+            </div>
+            <div className="flex justify-center">
+              <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                <Carousel fade>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block  h-[400px]"
+                      src={require("../../../assets/marvelApi/Imagem3.JPG")}
+                      alt="Cards seção pesquisada"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block  h-[400px]"
+                      src={require("../../../assets/marvelApi/Imagem4.JPG")}
+                      alt="Cards pesquisados na barra de pesquisa"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/marvelApi/Imagem5.JPG")}
+                      alt="Informações do card"
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
             </div>
           </div>
         </div>
@@ -86,6 +133,26 @@ export const MarvelApi = () => {
               utilizando a api disponibilizada pela marvel, no qual ela permite
               acessar os dados sobre os heróis, quadrinhos, eventos, criadores.
             </div>
+            <div className="flex justify-center">
+              <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                <Carousel fade>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/marvelApi/Imagem1.JPG")}
+                      alt="Página de entrada"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/marvelApi/Imagem2.JPG")}
+                      alt="Menu"
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
+            </div>
             <div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Após clicar nos cards de entrada que
               encaminham para uma seção, que possui tudo daquela seção separada
@@ -93,6 +160,33 @@ export const MarvelApi = () => {
               disponibiliza a respeito deles. Ao clicar no card do herói ele
               mostra informações mais específicas sobre ele. Além disso é
               possível pesquisar o herói que deseja.
+            </div>
+            <div className="flex justify-center">
+              <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
+                <Carousel fade>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block  h-[400px]"
+                      src={require("../../../assets/marvelApi/Imagem3.JPG")}
+                      alt="Cards seção pesquisada"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block  h-[400px]"
+                      src={require("../../../assets/marvelApi/Imagem4.JPG")}
+                      alt="Cards pesquisados na barra de pesquisa"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <img
+                      className="d-block h-[400px]"
+                      src={require("../../../assets/marvelApi/Imagem5.JPG")}
+                      alt="Informações do card"
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
             </div>
           </div>
         </div>
