@@ -11,6 +11,7 @@ import {
   turnOff,
   turnOn,
 } from "../store/modules/toggle/ToggleSlice";
+import { AiOutlineMenu } from "react-icons/ai";
 
 interface LinksProps {
   sidebar?: boolean;
@@ -61,70 +62,72 @@ export const Links = (props: LinksProps) => {
     <div className="">
       {sidebar ? (
         <div>
-          {explorer ? (
-            <Tooltip title="Explorer" placement="right">
-              <div
-                onClick={() => explorerOff()}
-                className="cursor-pointer w-[47px] bg-gray-800 text-white border-l-[2px] border-pink-400 flex justify-center text-[28px] py-[12px]"
-              >
-                <IoMdCopy />
-              </div>
-            </Tooltip>
-          ) : (
-            <Tooltip title="Explorer" placement="right">
-              <div
-                onClick={() => explorerOn()}
-                className="cursor-pointer w-[47px] text-gray-500 hover:text-gray-300 flex justify-center text-[28px] py-[12px]"
-              >
-                <IoMdCopy />
-              </div>
-            </Tooltip>
-          )}
-          <div>
-            <Tooltip title="Código do projeto" placement="right">
-              <a
-                href="https://github.com/murilopacheco98"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className="flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
-                  <VscSourceControl />
+          <div className="z-20">
+            {explorer ? (
+              <Tooltip title="Explorer" placement="right">
+                <div
+                  onClick={() => explorerOff()}
+                  className="cursor-pointer w-[47px] bg-gray-800 text-white border-l-[2px] border-pink-400 flex justify-center text-[28px] py-[12px]"
+                >
+                  <IoMdCopy />
                 </div>
-              </a>
-            </Tooltip>
-            <Tooltip title="Me encontre no Github" placement="right">
-              <a
-                href="https://github.com/murilopacheco98"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className="flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
-                  <FiGithub />
+              </Tooltip>
+            ) : (
+              <Tooltip title="Explorer" placement="right">
+                <div
+                  onClick={() => explorerOn()}
+                  className="cursor-pointer w-[47px] text-gray-500 hover:text-gray-300 flex justify-center text-[28px] py-[12px]"
+                >
+                  <IoMdCopy />
                 </div>
-              </a>
-            </Tooltip>
-            <Tooltip title="Me encontre no Linkedin" placement="right">
-              <a
-                href="https://www.linkedin.com/in/murilo-pacheco-037ba316b/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className="cursor-pointer flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
-                  <FaLinkedinIn />
-                </div>
-              </a>
-            </Tooltip>
-            <Tooltip title="Contacte me via e-mail" placement="right">
-              <a
-                href="mailto:murilo.pacheco99@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className="flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
-                  <HiOutlineMail />
-                </div>
-              </a>
-            </Tooltip>
+              </Tooltip>
+            )}
+            <div>
+              <Tooltip title="Código do projeto" placement="right">
+                <a
+                  href="https://github.com/murilopacheco98"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
+                    <VscSourceControl />
+                  </div>
+                </a>
+              </Tooltip>
+              <Tooltip title="Me encontre no Github" placement="right">
+                <a
+                  href="https://github.com/murilopacheco98"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
+                    <FiGithub />
+                  </div>
+                </a>
+              </Tooltip>
+              <Tooltip title="Me encontre no Linkedin" placement="right">
+                <a
+                  href="https://www.linkedin.com/in/murilo-pacheco-037ba316b/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="cursor-pointer flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
+                    <FaLinkedinIn />
+                  </div>
+                </a>
+              </Tooltip>
+              <Tooltip title="Contacte me via e-mail" placement="right">
+                <a
+                  href="mailto:murilo.pacheco99@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
+                    <HiOutlineMail />
+                  </div>
+                </a>
+              </Tooltip>
+            </div>
           </div>
         </div>
       ) : (
