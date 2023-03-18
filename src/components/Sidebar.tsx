@@ -86,17 +86,23 @@ export const Sidebar = (props: SidebarProps) => {
         onClick={() => {
           setMenu && setMenu(true);
         }}
-        className="cursor-pointer text-white text-[40px] ml-[30px] z-10 mt-[45px] absolute mobile:hidden"
+        className={
+          on
+            ? "cursor-pointer text-black text-[40px] ml-[40px] z-10 mt-[70px] absolute sm:hidden"
+            : "cursor-pointer text-white text-[40px] ml-[40px] z-10 mt-[70px] absolute sm:hidden"
+        }
       >
         <AiOutlineMenu />
       </div>
       {menu && (
-        <div className="absolute z-20">
-          <Explorer on={on} setOn={setOn} />
+        <div className="absolute z-20 bg-white mt-[25px] h-[calc(100vh-25px)] sm:hidden">
+          <div className="mt-[-25px]">
+            <Explorer on={on} setOn={setOn} />
+          </div>
         </div>
       )}
       <div className="flex">
-        <div className="hidden mobile:flex-col mobile:flex mt-[25px] w-[47px] pb-[10px] justify-between h-[calc(100vh-25px)] bg-opacity-[90%] bg-[#070419]">
+        <div className="hidden sm:flex-col sm:flex mt-[25px] w-[47px] pb-[10px] justify-between h-[calc(100vh-25px)] bg-opacity-[90%] bg-[#070419]">
           <Links sidebar explorer={explorer} setExplorer={setExplorer} />
           <div className="mb-[50px]">
             <Tooltip title="Ligue a luz" placement="right">
@@ -116,7 +122,11 @@ export const Sidebar = (props: SidebarProps) => {
             </Tooltip>
           </div>
         </div>
-        {explorer && <Explorer on={on} setOn={setOn} />}
+        {explorer && (
+          <div className="hidden sm:flex-col sm:flex">
+            <Explorer on={on} setOn={setOn} />
+          </div>
+        )}
       </div>
     </div>
   );

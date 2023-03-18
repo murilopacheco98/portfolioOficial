@@ -22,8 +22,8 @@ export const Home = () => {
           onClick={() => setMenu(false)}
           className={
             explorer
-              ? "pb-[80px] mt-[25px] flex flex-col items-center justify-center bg-opacity-[1%] h-[calc(100vh-25px)] bg-[#070419] w-[calc(100vw-200px)]"
-              : "pb-[80px] ml-[47px] mt-[25px] flex flex-col items-center justify-center bg-opacity-[1%] h-[calc(100vh-25px)] bg-[#070419] w-[calc(100vw-47px)]"
+              ? "pb-[80px] mt-[25px] flex flex-col items-center justify-center bg-opacity-[1%] h-[calc(100vh-25px)] bg-[#070419] w-[100vw] sm:w-[calc(100vw-200px)]"
+              : "pb-[80px] ml-[47px] mt-[25px] flex flex-col items-center justify-center bg-opacity-[1%] h-[calc(100vh-25px)] bg-[#070419] w-[100vw] sm:w-[calc(100vw-47px)]"
           }
         >
           <div className="text-[38px] lg:text-[48px] font-serif">
@@ -43,8 +43,8 @@ export const Home = () => {
           onClick={() => menu && setMenu(false)}
           className={
             explorer
-              ? "text-white pb-[80px] mt-[25px] flex flex-col items-center justify-center h-[calc(100vh-25px)] bg-[#070419] w-[100vw] mobile:w-[calc(100vw-47px)]"
-              : "text-white pb-[80px] mobile:ml-[0px] mt-[25px] flex flex-col items-center justify-center h-[calc(100vh-25px)] bg-[#070419] w-[100vw] mobile:w-[calc(100vw-47px)]"
+              ? "text-white pb-[80px] mt-[25px] flex flex-col items-center justify-center h-[calc(100vh-25px)] bg-[#070419] w-[100vw] sm:w-[calc(100vw-47px)]"
+              : "text-white pb-[80px] mobile:ml-[0px] mt-[25px] flex flex-col items-center justify-center h-[calc(100vh-25px)] bg-[#070419] w-[100vw] sm:w-[calc(100vw-47px)]"
           }
         >
           <div className="text-[38px] lg:text-[48px] font-serif">
