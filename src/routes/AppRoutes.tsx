@@ -7,6 +7,7 @@ import { Home } from "../pages/home/Home";
 import { Clinica } from "../pages/projetos/clinica/Clinica";
 import { CrudRecados } from "../pages/projetos/crudRecados/CrucRecados";
 import { MarvelApi } from "../pages/projetos/marvelApi/MarvelApi";
+import { OrderService } from "../pages/projetos/osSystem/OsSystem";
 import { SistemaDeVagas } from "../pages/projetos/sistemaDeVagas/SistemaDeVagas";
 
 export const AppRoutes = () => {
@@ -21,6 +22,7 @@ export const AppRoutes = () => {
         <Route path="/projetos/clinica" element={<Clinica />} />
         <Route path="/projetos/crud-recados" element={<CrudRecados />} />
         <Route path="/projetos/marvel-api" element={<MarvelApi />} />
+        <Route path="/projetos/order-service" element={<OrderService />} />
         <Route path="/projetos/sistema-de-vagas" element={<SistemaDeVagas />} />
       </Routes>
       </BrowserRouter>

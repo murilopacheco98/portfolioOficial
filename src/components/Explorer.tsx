@@ -184,6 +184,27 @@ export const Explorer = ( props: ExplorerProps ) => {
                     navigate("/projetos/sistema-de-vagas");
                     abaPage({
                       id: 4,
+                      name: "OrderService",
+                      urlName: "order-service",
+                      link: "/projetos/order-service",
+                    });
+                  }}
+                  className={
+                    on
+                      ? "pl-[22px] hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
+                      : "pl-[22px] hover:bg-opacity-10 hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
+                  }
+                >
+                  <div className="ml-[20px] text-[15px] text-blue-500 mr-[5px]">
+                    <FaReact />
+                  </div>
+                  <div>OrderService</div>
+                </div>
+                <div
+                  onClick={() => {
+                    navigate("/projetos/sistema-de-vagas");
+                    abaPage({
+                      id: 4,
                       name: "SistemaDeVagas",
                       urlName: "sistema-de-vagas",
                       link: "/projetos/sistema-de-vagas",
