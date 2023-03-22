@@ -47,7 +47,7 @@ export const Conhecimentos = () => {
             tailwind e typescript.
           </div>
           <div className="mb-[10px] font-light mx-[5vw] lg:mx-[10vw] text-[16px] lg:text-[18px] text-justify">
-            Front-end: Javascript, Typescript, React, Redux, Bootstrap,
+            Front-end: Javascript, Typescript, React, Redux, Angular, Ngrx, Bootstrap,
             Tailwind, Material UI.
           </div>
           <div className="mb-[10px] font-light mx-[5vw] lg:mx-[10vw] text-[16px] lg:text-[18px] text-justify">
