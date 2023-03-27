@@ -15,18 +15,24 @@ import {
 } from "../store/modules/toggle/ToggleSlice";
 import { useNavigate } from "react-router-dom";
 import { AbaPageProps, addPage } from "../store/modules/abaPage/AbaPageSlice";
+import { Projects } from "./Projects";
 
 interface ExplorerProps {
   setOn: React.Dispatch<React.SetStateAction<boolean | undefined>>;
   on: boolean | undefined;
 }
 
-export const Explorer = ( props: ExplorerProps ) => {
+export const Explorer = (props: ExplorerProps) => {
   const { on, setOn } = props;
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
-  const [projects, setProjects] = useState<boolean>(false);
+  const [projects, setProjects] = useState<boolean>(true);
+  const [clinica, setClinica] = useState<boolean>(false);
+  const [crudRecados, setCrudRecados] = useState<boolean>(false);
+  const [order, setOrder] = useState<boolean>(false);
+  const [vagas, setVagas] = useState<boolean>(false);
+
   const [porfolio, setPortfolio] = useState<boolean>(true);
 
   const projectOn = () => {
@@ -59,7 +65,7 @@ export const Explorer = ( props: ExplorerProps ) => {
       })
     );
   };
-  
+
   return (
     <div
       className={
@@ -112,117 +118,18 @@ export const Explorer = ( props: ExplorerProps ) => {
               </div>
               <div>projetos</div>
             </div>
-            {projects && (
-              <div>
-                <div
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigate("/projetos/clinica");
-                    abaPage({
-                      id: 1,
-                      name: "Clinica",
-                      urlName: "clinica",
-                      link: "/projetos/clinica",
-                    });
-                  }}
-                  // className="pl-[22px] hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
-                  className={
-                    on
-                      ? "pl-[22px] hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
-                      : "pl-[22px] hover:bg-opacity-10 hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
-                  }
-                >
-                  <div className="ml-[20px] text-[15px] text-blue-500 mr-[5px]">
-                    <FaReact />
-                  </div>
-                  <div>Clínica</div>
-                </div>
-                <div
-                  onClick={() => {
-                    navigate("/projetos/crud-recados");
-                    abaPage({
-                      id: 2,
-                      name: "CrudRecados",
-                      urlName: "crud-recados",
-                      link: "/projetos/crud-recados",
-                    });
-                  }}
-                  className={
-                    on
-                      ? "pl-[22px] hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
-                      : "pl-[22px] hover:bg-opacity-10 hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
-                  }
-                >
-                  <div className="ml-[20px] text-[15px] text-blue-500 mr-[5px]">
-                    <FaReact />
-                  </div>
-                  <div>CrudRecados</div>
-                </div>
-                <div
-                  onClick={() => {
-                    navigate("/projetos/marvel-api");
-                    abaPage({
-                      id: 3,
-                      name: "MarvelApi",
-                      urlName: "marvel-api",
-                      link: "/projetos/marvel-api",
-                    });
-                  }}
-                  className={
-                    on
-                      ? "pl-[22px] hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
-                      : "pl-[22px] hover:bg-opacity-10 hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
-                  }
-                >
-                  <div className="ml-[20px] text-[15px] text-blue-500 mr-[5px]">
-                    <FaReact />
-                  </div>
-                  <div>MarvelApi</div>
-                </div>
-                <div
-                  onClick={() => {
-                    navigate("/projetos/sistema-de-vagas");
-                    abaPage({
-                      id: 4,
-                      name: "OrderService",
-                      urlName: "order-service",
-                      link: "/projetos/order-service",
-                    });
-                  }}
-                  className={
-                    on
-                      ? "pl-[22px] hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
-                      : "pl-[22px] hover:bg-opacity-10 hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
-                  }
-                >
-                  <div className="ml-[20px] text-[15px] text-blue-500 mr-[5px]">
-                    <FaReact />
-                  </div>
-                  <div>OrderService</div>
-                </div>
-                <div
-                  onClick={() => {
-                    navigate("/projetos/sistema-de-vagas");
-                    abaPage({
-                      id: 4,
-                      name: "SistemaDeVagas",
-                      urlName: "sistema-de-vagas",
-                      link: "/projetos/sistema-de-vagas",
-                    });
-                  }}
-                  className={
-                    on
-                      ? "pl-[22px] hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
-                      : "pl-[22px] hover:bg-opacity-10 hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
-                  }
-                >
-                  <div className="ml-[20px] text-[15px] text-blue-500 mr-[5px]">
-                    <FaReact />
-                  </div>
-                  <div>SistemaDeVagas</div>
-                </div>
-              </div>
-            )}
+            <Projects
+              projects={projects}
+              on={on}
+              clinica={clinica}
+              setClinica={setClinica}
+              crudRecados={crudRecados}
+              setCrudRecados={setCrudRecados}
+              order={order}
+              setOrder={setOrder}
+              vagas={vagas}
+              setVagas={setVagas}
+            />
             <div
               onClick={() => {
                 navigate("/geral");
@@ -235,11 +142,11 @@ export const Explorer = ( props: ExplorerProps ) => {
               }}
               className={
                 on
-                  ? "pl-[5px] hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
-                  : "pl-[5px] hover:bg-opacity-10 hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
+                  ? "pl-[0px] hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
+                  : "pl-[0px] hover:bg-opacity-10 hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
               }
             >
-              <div className="ml-[26px] text-[15px] text-blue-500 mr-[5px]">
+              <div className="ml-[23px] text-[15px] text-blue-500 mr-[5px]">
                 <FaReact />
               </div>
               <div>Geral</div>
@@ -256,11 +163,11 @@ export const Explorer = ( props: ExplorerProps ) => {
               }}
               className={
                 on
-                  ? "pl-[5px] hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
-                  : "pl-[5px] hover:bg-opacity-10 hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
+                  ? "pl-[0px] hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
+                  : "pl-[0px] hover:bg-opacity-10 hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
               }
             >
-              <div className="ml-[26px] text-[15px] text-blue-500 mr-[5px]">
+              <div className="ml-[23px] text-[15px] text-blue-500 mr-[5px]">
                 <FaReact />
               </div>
               <div>Conhecimentos</div>
@@ -277,11 +184,11 @@ export const Explorer = ( props: ExplorerProps ) => {
               }}
               className={
                 on
-                  ? "pl-[5px] hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
-                  : "pl-[5px] hover:bg-opacity-10 hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
+                  ? "pl-[0px] hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
+                  : "pl-[0px] hover:bg-opacity-10 hover:bg-gray-100 cursor-pointer text-[12px] flex items-center h-[25px]"
               }
             >
-              <div className="ml-[26px] text-[15px] text-blue-500 mr-[5px]">
+              <div className="ml-[23px] text-[15px] text-blue-500 mr-[5px]">
                 <FaReact />
               </div>
               <div>Formação</div>

@@ -28,11 +28,9 @@ interface SidebarProps {
 
 export const Sidebar = (props: SidebarProps) => {
   const { on, setOn, explorer, setExplorer, menu, setMenu } = props;
-  const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
-  const [projects, setProjects] = useState<boolean>(false);
-  const [porfolio, setPortfolio] = useState<boolean>(true);
+  const [projects, setProjects] = useState<boolean>(true);
 
   const toggle = Object.values(
     useAppSelector((store) => store.toggle.entities)
