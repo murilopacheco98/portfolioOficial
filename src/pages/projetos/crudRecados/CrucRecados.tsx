@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import { Abas } from "../../../components/Abas";
 import { Sidebar } from "../../../components/Sidebar";
-import { useAppSelector } from "../../../store/hooks";
 
 export const CrudRecados = () => {
   const [on, setOn] = useState<boolean>();

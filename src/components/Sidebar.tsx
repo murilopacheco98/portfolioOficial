@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { SlArrowDown, SlArrowRight } from "react-icons/sl";
 import { AiOutlineMenu } from "react-icons/ai";
-import { FaReact } from "react-icons/fa";
 import { BsSun, BsFillSunFill } from "react-icons/bs";
 import { IoSettingsOutline } from "react-icons/io5";
-import { ImFolderOpen } from "react-icons/im";
 import { Tooltip } from "@mui/material";
 import { Links } from "./Links";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
@@ -13,8 +10,6 @@ import {
   turnOff,
   turnOn,
 } from "../store/modules/toggle/ToggleSlice";
-import { useNavigate } from "react-router-dom";
-import { AbaPageProps, addPage } from "../store/modules/abaPage/AbaPageSlice";
 import { Explorer } from "./Explorer";
 
 interface SidebarProps {

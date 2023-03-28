@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { SlArrowDown, SlArrowRight } from "react-icons/sl";
-import { AiOutlineMenu } from "react-icons/ai";
 import { FaReact } from "react-icons/fa";
-import { BsSun, BsFillSunFill } from "react-icons/bs";
-import { IoSettingsOutline } from "react-icons/io5";
 import { ImFolderOpen } from "react-icons/im";
-import { Tooltip } from "@mui/material";
-import { Links } from "./Links";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { useAppDispatch } from "../store/hooks";
 import {
-  addToggle,
   turnOff,
   turnOn,
 } from "../store/modules/toggle/ToggleSlice";
@@ -23,7 +17,7 @@ interface ExplorerProps {
 }
 
 export const Explorer = (props: ExplorerProps) => {
-  const { on, setOn } = props;
+  const { on } = props;
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 

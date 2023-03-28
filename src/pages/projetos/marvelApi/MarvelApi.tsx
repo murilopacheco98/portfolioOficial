@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Abas } from "../../../components/Abas";
 import { Sidebar } from "../../../components/Sidebar";
-import { useAppSelector } from "../../../store/hooks";
 import Carousel from "react-bootstrap/Carousel";
 
 export const MarvelApi = () => {
@@ -9,7 +8,7 @@ export const MarvelApi = () => {
   const [explorer, setExplorer] = useState<boolean>(true);
   const [menu, setMenu] = useState<boolean>(false);
 
-  const light = Object.values(useAppSelector((store) => store.toggle.entities));
+  // const light = Object.values(useAppSelector((store) => store.toggle.entities));
   const lightOn = on ? "bg-opacity-[1%]" : "bg-opacity-[95%]";
   const textOn = on ? "text-black" : "text-white";
 

@@ -96,7 +96,7 @@ export const Home = () => {
           />
         </div>
         <div className="absolute flex flex-col text-end items-end mt-[25px] w-[95%]">
-          <div className={`${text} mr-[15px] font-serif`}>Projeto destaque</div>
+          <div className={`${text} mr-[15px] font-serif mt-[20px]`}>Projeto destaque</div>
           {/* <div>
             <img
               className="h-[50px] w-[140px]"

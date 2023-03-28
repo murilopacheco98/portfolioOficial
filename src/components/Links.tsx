@@ -11,7 +11,6 @@ import {
   turnOff,
   turnOn,
 } from "../store/modules/toggle/ToggleSlice";
-import { AiOutlineMenu } from "react-icons/ai";
 
 interface LinksProps {
   sidebar?: boolean;
