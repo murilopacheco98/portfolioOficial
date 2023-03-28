@@ -132,12 +132,12 @@ export const Home = () => {
           </div>
         </div>
         <div
-          className={`absolute z-10 flex justify-center mt-[225px] md:mt-[185px] ml-[50px] w-[calc(100%-50px)] ${text} justify-center flex flex-col`}
+          className={`absolute z-10 flex justify-center mt-[225px] md-lg:mt-[185px] ml-[50px] w-[calc(100%-50px)] ${text} justify-center flex flex-col`}
         >
           <div className="flex justify-center ml-[-50px]">
             <div className="px-[5px] flex justify-center">
               <img
-                className="h-[160px] md:h-[200px] lg:h-[220px] w-[125px]"
+                className="h-[160px] md:h-[190px] lg:h-[220px] w-[125px]"
                 src={require("../../assets/home/meuAvatar.png")}
                 alt="paciente 1"
               />
