@@ -111,7 +111,7 @@ export const Links = (props: LinksProps) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <div className="cursor-pointer flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
+                  <div className="flex justify-center text-[28px] lg:text-[36px] py-[12px] text-gray-500 hover:text-gray-300">
                     <FaLinkedinIn />
                   </div>
                 </a>

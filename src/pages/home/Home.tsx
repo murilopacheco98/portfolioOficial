@@ -4,11 +4,27 @@ import { Sidebar } from "../../components/Sidebar";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../store/hooks";
+import { AbaPageProps, addPage } from "../../store/modules/abaPage/AbaPageSlice";
 
 export const Home = () => {
   const [on, setOn] = useState<boolean>();
+  const navigate = useNavigate();
   const [explorer, setExplorer] = useState<boolean>(true);
   const [menu, setMenu] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
+
+  const abaPage = (input: AbaPageProps) => {
+    dispatch(
+      addPage({
+        id: input.id,
+        name: input.name,
+        urlName: input.urlName,
+        link: input.link,
+      })
+    );
+  };
 
   const light = on ? "opacity-[5%]" : "opacity-[100%]";
   const lightImage = on ? "100%" : "6%";
@@ -25,9 +41,9 @@ export const Home = () => {
       partialVisibilityGutter: 30,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 700 },
-      items: 2,
-      partialVisibilityGutter: 25,
+      breakpoint: { max: 1024, min: 600 },
+      items: explorer ? 1 : 2,
+      partialVisibilityGutter: explorer ? 120 : 25,
     },
     mobile: {
       breakpoint: { max: 600, min: 0 },
@@ -49,14 +65,16 @@ export const Home = () => {
       <div
         className={
           explorer || menu
-            ? `font-serif flex w-[150px] text-center absolute ${text} text-[24px] z-10 ml-[153px] mt-[65px] sm:mt-[65px] sm:ml-[223px]`
-            : `font-serif flex w-[150px] text-center absolute ${text} text-[24px] z-10 ml-[93px] mt-[55px] sm:mt-[20px] sm:ml-[63px]`
+            ? `font-serif flex w-[120px] md:w-[150px] text-center absolute ${text} text-[24px] z-10 ml-[153px] mt-[65px] sm:mt-[65px] sm:ml-[223px]`
+            : `font-serif flex w-[120px] md:w-[150px] text-center absolute ${text} text-[24px] z-10 ml-[93px] mt-[55px] sm:mt-[20px] sm:ml-[63px]`
         }
       >
-        <div className="mt-[20px] text-[30px]">
+        <div className="mt-[20px] text-[24px] md:text-[30px]">
           <AiOutlineArrowLeft />
         </div>
-        <div> Meus Projetos</div>
+        <div className="text-[20px] mt-[5px] md:text-[24px]">
+          Meus Projetos
+        </div>
       </div>
       <div className="relative flex ">
         <div className={`${light} bg-[#070419]  mt-[25px] `}>
@@ -77,23 +95,58 @@ export const Home = () => {
             }}
           />
         </div>
+        <div className="absolute flex flex-col text-end items-end mt-[25px] w-[95%]">
+          <div className={`${text} mr-[15px] font-serif`}>Projeto destaque</div>
+          {/* <div>
+            <img
+              className="h-[50px] w-[140px]"
+              src={require("../../assets/home/coroa.png")}
+              alt="paciente 1"
+            />
+          </div> */}
+          <div
+            className="z-10 relative cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/projetos/clinica");
+              abaPage({
+                id: 1,
+                name: "Clinica",
+                urlName: "clinica",
+                link: "/projetos/clinica",
+              });
+            }}
+          >
+            <div>
+              <img
+                className="h-[100px] w-[140px] "
+                src={require("../../assets/home/coroa.png")}
+                alt="paciente 1"
+              />
+            </div>
+            <div
+              className={`font-serif text-[14px] absolute w-[100px] ml-[20px] mt-[-65px] ${text} flex justify-center text-center`}
+            >
+              Sistema de Clínica
+            </div>
+          </div>
+        </div>
         <div
-          className={`absolute mt-[175px] w-[100%] ${text} justify-center flex flex-col`}
+          className={`absolute z-10 flex justify-center mt-[225px] md:mt-[185px] ml-[50px] w-[calc(100%-50px)] ${text} justify-center flex flex-col`}
         >
           <div className="flex justify-center ml-[-50px]">
             <div className="px-[5px] flex justify-center">
               <img
-                className="h-[220px] w-[125px]"
-                src={require("../../assets/meuAvatar.png")}
+                className="h-[160px] md:h-[200px] lg:h-[220px] w-[125px]"
+                src={require("../../assets/home/meuAvatar.png")}
                 alt="paciente 1"
               />
             </div>
             <div>
-              <div className="text-[38px] text-center lg:text-[48px] font-serif">
+              <div className="text-[30px] sm:text-[38px] lg:text-[48px] text-center  font-serif">
                 Murilo Pacheco
               </div>
-
-              <div className="text-[16px] text-center font-extralight lg:text-[20px]">
+              <div className="text-[13px] sm:text-[16px] text-center font-extralight lg:text-[20px]">
                 O sucesso é a soma de pequenos esforços, <br /> repetidos dia
                 após dia.
               </div>
@@ -118,7 +171,7 @@ export const Home = () => {
               keyBoardControl={true}
               customTransition="all .5"
               transitionDuration={500}
-              containerClass={`w-[85%]  ml-[5%] lg:w-[80%] lg:ml-[0%]`}
+              containerClass={`w-[85%]  ml-[5%] sm:ml-[0%] lg:w-[80%] lg:ml-[0%]`}
               removeArrowOnDeviceType={["tablet", "mobile"]}
               dotListClass="custom-dot-list-style"
               itemClass="carousel-item-padding-40-px"

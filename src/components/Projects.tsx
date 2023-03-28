@@ -50,6 +50,7 @@ export const Projects = (props: ProjectsProps) => {
       })
     );
   };
+  
   return (
     <div>
       {projects && (
