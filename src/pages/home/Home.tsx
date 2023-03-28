@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Links } from "../../components/Links";
 import { Sidebar } from "../../components/Sidebar";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 export const Home = () => {
   const [on, setOn] = useState<boolean>();
@@ -9,8 +11,30 @@ export const Home = () => {
   const [menu, setMenu] = useState<boolean>(false);
 
   const light = on ? "opacity-[5%]" : "opacity-[100%]";
-  const lightImage = on ? "100%" : "4%";
+  const lightImage = on ? "100%" : "6%";
   const text = on ? "text-black" : "text-white";
+
+  const sliderWidth = explorer
+    ? "w-[calc(100vw-202px)]"
+    : "w-[calc(100vw-47px)]";
+
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      partialVisibilityGutter: 30,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 700 },
+      items: 2,
+      partialVisibilityGutter: 25,
+    },
+    mobile: {
+      breakpoint: { max: 600, min: 0 },
+      items: 1,
+      partialVisibilityGutter: 20,
+    },
+  };
 
   return (
     <div className="flex">
@@ -34,13 +58,13 @@ export const Home = () => {
         </div>
         <div> Meus Projetos</div>
       </div>
-      <div className="relative flex justify-center items-center">
+      <div className="relative flex ">
         <div className={`${light} bg-[#070419]  mt-[25px] `}>
           <div
             onClick={() => setMenu(false)}
             className={
               explorer
-                ? `pb-[80px] h-[calc(100vh-25px)] w-[100vw] sm:w-[calc(100vw-203px)]`
+                ? `pb-[80px] h-[calc(100vh-25px)] w-[100vw] sm:w-[calc(100vw-202px)]`
                 : `pb-[80px] h-[calc(100vh-25px)] w-[100vw] sm:w-[calc(100vw-47px)]`
             }
             style={{
@@ -53,17 +77,88 @@ export const Home = () => {
             }}
           />
         </div>
+        <div
+          className={`absolute mt-[175px] w-[100%] ${text} justify-center flex flex-col`}
+        >
+          <div className="flex justify-center ml-[-50px]">
+            <div className="px-[5px] flex justify-center">
+              <img
+                className="h-[220px] w-[125px]"
+                src={require("../../assets/meuAvatar.png")}
+                alt="paciente 1"
+              />
+            </div>
+            <div>
+              <div className="text-[38px] text-center lg:text-[48px] font-serif">
+                Murilo Pacheco
+              </div>
 
-        <div className={`absolute ${text} `}>
-          <div className="text-[38px] lg:text-[48px] font-serif">
-            Murilo Pacheco
+              <div className="text-[16px] text-center font-extralight lg:text-[20px]">
+                O sucesso é a soma de pequenos esforços, <br /> repetidos dia
+                após dia.
+              </div>
+              <div className="mt-[10px] flex justify-center">
+                <Links />
+              </div>
+            </div>
           </div>
-          <div className="text-[16px] text-center font-extralight lg:text-[20px]">
-            O sucesso é a soma de pequenos esforços, <br /> repetidos dia após
-            dia.
-          </div>
-          <div className="mt-[10px] flex justify-center">
-            <Links />
+        </div>
+        <div className={`absolute ${text}  `}>
+          <div
+            className={`my-[20px] mt-[450px] ${sliderWidth} flex items-center text-center justify-center`}
+          >
+            <Carousel
+              swipeable={false}
+              // draggable={false}
+              partialVisbile={true}
+              showDots={true}
+              responsive={responsive}
+              ssr={true} // means to render carousel on server-side.
+              autoPlaySpeed={1000}
+              keyBoardControl={true}
+              customTransition="all .5"
+              transitionDuration={500}
+              containerClass={`w-[85%]  ml-[5%] lg:w-[80%] lg:ml-[0%]`}
+              removeArrowOnDeviceType={["tablet", "mobile"]}
+              dotListClass="custom-dot-list-style"
+              itemClass="carousel-item-padding-40-px"
+            >
+              <div className="px-[5px]">
+                <img
+                  className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
+                  src={require("../../assets/clinica/Imagem1.JPG")}
+                  alt="paciente 1"
+                />
+              </div>
+              <div className="px-[5px]">
+                <img
+                  className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
+                  src={require("../../assets/clinica/Imagem2.JPG")}
+                  alt="paciente 2"
+                />
+              </div>
+              <div className="px-[5px]">
+                <img
+                  className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
+                  src={require("../../assets/clinica/Imagem3.JPG")}
+                  alt="paciente3"
+                />
+              </div>
+              <div className="px-[5px]">
+                <img
+                  className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
+                  src={require("../../assets/clinica/Imagem4.JPG")}
+                  alt="paciente 4"
+                />
+              </div>
+              <div className="px-[5px]">
+                <img
+                  className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
+                  src={require("../../assets/clinica/Imagem5.JPG")}
+                  alt="paciente 5"
+                />
+              </div>
+            </Carousel>
           </div>
         </div>
       </div>

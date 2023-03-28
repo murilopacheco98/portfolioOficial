@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import { Abas } from "../../../components/Abas";
 import { Sidebar } from "../../../components/Sidebar";
-import { useAppSelector } from "../../../store/hooks";
 
-export const CrudRecados = () => {
+export const SistemaDeVagasBack = () => {
   const [on, setOn] = useState<boolean>();
   const [explorer, setExplorer] = useState<boolean>(true);
   const [menu, setMenu] = useState<boolean>(false);
 
-  // const light = Object.values(useAppSelector((store) => store.toggle.entities));
   const lightOn = on ? "bg-opacity-[1%]" : "bg-opacity-[95%]";
   const textOn = on ? "text-black" : "text-white";
 
@@ -20,10 +18,11 @@ export const CrudRecados = () => {
         setExplorer={setExplorer}
         setOn={setOn}
         on={on}
-        setMenu={setMenu}
         menu={menu}
+        setMenu={setMenu}
       />
       <div
+        onClick={() => setMenu(false)}
         className={
           explorer
             ? `overflow-y-scroll relative mt-[25px] ${textOn} ${lightOn} h-[calc(100vh-25px)] bg-[#070419]`
@@ -31,15 +30,25 @@ export const CrudRecados = () => {
         }
       >
         <Abas light={on} />
-        <div className="font-semibold flex justify-center mt-[20px] mb-[20px] text-[24px]">
-          CRUD - Recados
+        <div className="font-semibold flex justify-center mt-[20px] mb-[10px] text-[24px]">
+          Sistema de clínica
         </div>
-        <div className="mb-[40px] font-light mx-[5vw] lg:ml-[10vw] lg:mr-[12vw] text-[16px] lg:text-[18px] text-justify">
+        <div className="mb-[40px] font-light mx-[5vw] lg:mx-[10vw] text-[16px] lg:text-[18px] text-justify">
           <div>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este projeto possui cadastro e login.
-            O cadastro está com formik e yup para validações e a senha está com
-            botao para ver ou esconder. O sistema possui authorização e
-            authenticação de acesso.
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tecnologias utilizadas: Spring
+            security, oauth, jwt, Spring Boot, Spring data JPA, lombok, Spring
+            Web e Teste unitário.
+            <br />
+            Este projeto tem como objetivo conectar candidatos, empresas
+            parceiros e administração, no qual as empresas ofertam vagas e os
+            candidatos podem fazer suas candidaturas. Após isso a empresa faz a
+            análise e decidi o futuro do candidato.
+          </div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O sistema possui authorização e
+            autenticação de acesso que utiliza o token jwt e oauth do spring
+            security. O candidato cadastra e sobe suas informações na aplicação
+            e pode candidatar e ver as vagas que ele se candidatou.
           </div>
           <div className="flex justify-center">
             <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
@@ -47,39 +56,46 @@ export const CrudRecados = () => {
                 <Carousel.Item interval={5000}>
                   <img
                     className="d-block h-[400px]"
-                    src={require("../../../assets/crudRecados/Imagem1.JPG")}
-                    alt="Login"
+                    src={require("../../../assets/clinica/Imagem1.JPG")}
+                    alt="paciente 1"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
                     className="d-block h-[400px]"
-                    src={require("../../../assets/crudRecados/Imagem2.JPG")}
-                    alt="Cadastro"
+                    src={require("../../../assets/clinica/Imagem2.JPG")}
+                    alt="paciente 2"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
                     className="d-block h-[400px]"
-                    src={require("../../../assets/crudRecados/Imagem3.JPG")}
-                    alt="1"
+                    src={require("../../../assets/clinica/Imagem3.JPG")}
+                    alt="paciente3"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
                     className="d-block h-[400px]"
-                    src={require("../../../assets/crudRecados/Imagem4.JPG")}
-                    alt="2"
+                    src={require("../../../assets/clinica/Imagem4.JPG")}
+                    alt="paciente 4"
+                  />
+                </Carousel.Item>
+                <Carousel.Item interval={5000}>
+                  <img
+                    className="d-block h-[400px]"
+                    src={require("../../../assets/clinica/Imagem5.JPG")}
+                    alt="paciente 5"
                   />
                 </Carousel.Item>
               </Carousel>
             </div>
           </div>
           <div>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O crud possui as 4 operações em todos
-            os recados, o create, read, update e delete. O create e o update
-            estão em um modal e o read está direcionado para os recados do
-            usuário.
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As empresas parceiras são cadastradas
+            pelo adm e podem gerenciar suas vagas e os candidatos de cada vaga.
+            O adm faz todo o gerenciamento da aplicação, o qual seriam os
+            candidatos e as empresas parceiras.
           </div>
           <div className="flex justify-center">
             <div className="my-[20px] w-[800px] flex items-center text-center justify-center">
@@ -87,38 +103,40 @@ export const CrudRecados = () => {
                 <Carousel.Item interval={5000}>
                   <img
                     className="d-block h-[400px]"
-                    src={require("../../../assets/crudRecados/Imagem5.JPG")}
-                    alt="3"
+                    src={require("../../../assets/clinica/Imagem1.JPG")}
+                    alt="paciente 1"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
                     className="d-block h-[400px]"
-                    src={require("../../../assets/crudRecados/Imagem6.JPG")}
-                    alt="4"
+                    src={require("../../../assets/clinica/Imagem2.JPG")}
+                    alt="paciente 2"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
                     className="d-block h-[400px]"
-                    src={require("../../../assets/crudRecados/Imagem7.JPG")}
-                    alt="5"
+                    src={require("../../../assets/clinica/Imagem3.JPG")}
+                    alt="paciente3"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
                     className="d-block h-[400px]"
-                    src={require("../../../assets/crudRecados/Imagem8.JPG")}
-                    alt="6"
+                    src={require("../../../assets/clinica/Imagem4.JPG")}
+                    alt="paciente 4"
+                  />
+                </Carousel.Item>
+                <Carousel.Item interval={5000}>
+                  <img
+                    className="d-block h-[400px]"
+                    src={require("../../../assets/clinica/Imagem5.JPG")}
+                    alt="paciente 5"
                   />
                 </Carousel.Item>
               </Carousel>
             </div>
-          </div>
-          <div>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Além disso possui a barra de pesquisa
-            de recados e a paginação do material UI. A pesquisa é feita após o
-            click no botão, e utilizando JpaSql no back-end.
           </div>
         </div>
       </div>
