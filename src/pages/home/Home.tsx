@@ -6,7 +6,10 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../store/hooks";
-import { AbaPageProps, addPage } from "../../store/modules/abaPage/AbaPageSlice";
+import {
+  AbaPageProps,
+  addPage,
+} from "../../store/modules/abaPage/AbaPageSlice";
 
 export const Home = () => {
   const [on, setOn] = useState<boolean>();
@@ -65,25 +68,22 @@ export const Home = () => {
       <div
         className={
           explorer || menu
-            ? `font-serif flex w-[120px] md:w-[150px] text-center absolute ${text} text-[24px] z-10 ml-[153px] mt-[65px] sm:mt-[65px] sm:ml-[223px]`
-            : `font-serif flex w-[120px] md:w-[150px] text-center absolute ${text} text-[24px] z-10 ml-[93px] mt-[55px] sm:mt-[20px] sm:ml-[63px]`
+            ? `font-serif flex w-[120px] md:w-[150px] text-center absolute ${text} text-[24px] z-10 ml-[163px] mt-[68px] md:mt-[65px] md:ml-[223px]`
+            : `font-serif flex w-[120px] md:w-[150px] text-center absolute ${text} text-[24px] z-10 ml-[93px] mt-[60px] md:mt-[20px] md:ml-[63px]`
         }
       >
         <div className="mt-[20px] text-[24px] md:text-[30px]">
           <AiOutlineArrowLeft />
         </div>
-        <div className="text-[20px] mt-[5px] md:text-[24px]">
-          Meus Projetos
-        </div>
+        <div className="text-[20px] mt-[5px] md:text-[24px]">Meus Projetos</div>
       </div>
-      <div className="relative flex ">
+      <div onClick={() => setMenu(false)} className="relative flex ">
         <div className={`${light} bg-[#070419]  mt-[25px] `}>
           <div
-            onClick={() => setMenu(false)}
             className={
               explorer
-                ? `pb-[80px] h-[calc(100vh-25px)] w-[100vw] sm:w-[calc(100vw-202px)]`
-                : `pb-[80px] h-[calc(100vh-25px)] w-[100vw] sm:w-[calc(100vw-47px)]`
+                ? `pb-[80px] h-[calc(100vh-25px)] w-[100vw] md:w-[calc(100vw-202px)]`
+                : `pb-[80px] h-[calc(100vh-25px)] w-[100vw] md:w-[calc(100vw-47px)]`
             }
             style={{
               backgroundImage: `url("https://www.rededorsaoluiz.com.br/assets/imgs/bg_footer.png")`,
@@ -96,7 +96,9 @@ export const Home = () => {
           />
         </div>
         <div className="absolute flex flex-col text-end items-end mt-[25px] w-[95%]">
-          <div className={`${text} mr-[15px] font-serif mt-[20px]`}>Projeto destaque</div>
+          <div className={`${text} mr-[15px] font-serif mt-[20px]`}>
+            Projeto destaque
+          </div>
           {/* <div>
             <img
               className="h-[50px] w-[140px]"
@@ -179,35 +181,35 @@ export const Home = () => {
               <div className="px-[5px]">
                 <img
                   className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
-                  src={require("../../assets/clinica/Imagem1.JPG")}
+                  src={require("../../assets/clinica/Imagem2.JPG")}
                   alt="paciente 1"
                 />
               </div>
               <div className="px-[5px]">
                 <img
                   className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
-                  src={require("../../assets/clinica/Imagem2.JPG")}
+                  src={require("../../assets/marvelApi/Imagem1.JPG")}
                   alt="paciente 2"
                 />
               </div>
               <div className="px-[5px]">
                 <img
                   className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
-                  src={require("../../assets/clinica/Imagem3.JPG")}
+                  src={require("../../assets/sistemaDeVagas/Imagem3.JPG")}
                   alt="paciente3"
                 />
               </div>
               <div className="px-[5px]">
                 <img
                   className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
-                  src={require("../../assets/clinica/Imagem4.JPG")}
+                  src={require("../../assets/ossystem/TecnicosGet.JPG")}
                   alt="paciente 4"
                 />
               </div>
               <div className="px-[5px]">
                 <img
                   className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
-                  src={require("../../assets/clinica/Imagem5.JPG")}
+                  src={require("../../assets/crudRecados/Imagem5.JPG")}
                   alt="paciente 5"
                 />
               </div>
