@@ -44,13 +44,11 @@ export const Formacao = () => {
             MAIO 2018 <br />
             <div className="font-bold mb-[5px]">
               Universidade Federal da Grande Dourados Bacharelado em Engenharia
-              Mecânica
             </div>
-            Curso de engenharia mecânica focado em 4 frentes: transferência de
+            Curso de engenharia focado em 4 frentes: transferência de
             calor, análise de materiais, mecânica dos fluidos e vibrações.
             Durante o curso foi onde conheci um pouco sobre programação, no qual
-            eu utilizei para análise de vibrações (meu tcc foi sobre isso) e
-            análise da mecânica dos fluidos.
+            eu utilizei para análises e validações de métodos.
           </div>
           <div className="flex h-[150px] lg:h-[200px] justify-center">
             <img
