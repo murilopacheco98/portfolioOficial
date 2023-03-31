@@ -174,7 +174,7 @@ export const Home = () => {
         </div>
         <div className={`absolute ${text}  `}>
           <div
-            className={`mt-[420px] w-[100vw] ${sliderWidth} flex items-center text-center justify-center`}
+            className={`mt-[420px] sm:mt-[450px] w-[100vw] ${sliderWidth} flex items-center text-center justify-center`}
           >
             <Carousel
               swipeable={false}
