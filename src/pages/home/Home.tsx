@@ -187,7 +187,7 @@ export const Home = () => {
               keyBoardControl={true}
               customTransition="all .5"
               transitionDuration={500}
-              containerClass={`w-[85%] sm:ml-[7.5%] md:ml-[0%] lg:w-[80%] lg:ml-[0%]`}
+              containerClass={`w-[85%] ml-[0%] lg:w-[80%]`}
               removeArrowOnDeviceType={["tablet", "mobile"]}
               dotListClass="custom-dot-list-style"
               itemClass="carousel-item-padding-40-px"
