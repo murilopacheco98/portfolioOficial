@@ -34,8 +34,8 @@ export const Home = () => {
   const text = on ? "text-black" : "text-white";
 
   const sliderWidth = explorer
-    ? "w-[calc(100vw-202px)]"
-    : "w-[calc(100vw-47px)]";
+    ? "md:w-[calc(100vw-202px)]"
+    : "md:w-[calc(100vw-47px)]";
 
   const responsive = {
     desktop: {
@@ -44,12 +44,22 @@ export const Home = () => {
       partialVisibilityGutter: 30,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 600 },
+      breakpoint: { max: 1024, min: 800 },
       items: explorer ? 1 : 2,
       partialVisibilityGutter: explorer ? 120 : 25,
     },
+    middleScreen: {
+      breakpoint: { max: 800, min: 600 },
+      items: 2,
+      partialVisibilityGutter:20,
+    },
+    responsive: {
+      breakpoint: { max: 600, min: 460 },
+      items: 1,
+      partialVisibilityGutter: 100,
+    },
     mobile: {
-      breakpoint: { max: 600, min: 0 },
+      breakpoint: { max: 460, min: 0 },
       items: 1,
       partialVisibilityGutter: 20,
     },
@@ -72,10 +82,14 @@ export const Home = () => {
             : `font-serif flex w-[120px] md:w-[150px] text-center absolute ${text} text-[24px] z-10 ml-[93px] mt-[60px] md:mt-[20px] md:ml-[63px]`
         }
       >
-        <div className="mt-[20px] text-[24px] md:text-[30px]">
-          <AiOutlineArrowLeft />
+        <div className="hidden md:flex md:flex-col">
+          <div className="mt-[20px] text-[24px] md:text-[30px]">
+            <AiOutlineArrowLeft />
+          </div>
+          <div className="text-[20px] mt-[5px] md:text-[24px]">
+            Meus Projetos
+          </div>
         </div>
-        <div className="text-[20px] mt-[5px] md:text-[24px]">Meus Projetos</div>
       </div>
       <div onClick={() => setMenu(false)} className="relative flex ">
         <div className={`${light} bg-[#070419]  mt-[25px] `}>
@@ -160,7 +174,7 @@ export const Home = () => {
         </div>
         <div className={`absolute ${text}  `}>
           <div
-            className={`my-[20px] mt-[450px] ${sliderWidth} flex items-center text-center justify-center`}
+            className={`mt-[420px] w-[100vw] ${sliderWidth} flex items-center text-center justify-center`}
           >
             <Carousel
               swipeable={false}
@@ -173,42 +187,42 @@ export const Home = () => {
               keyBoardControl={true}
               customTransition="all .5"
               transitionDuration={500}
-              containerClass={`w-[85%] ml-[7.5%] md:ml-[0%] lg:w-[80%] lg:ml-[0%]`}
+              containerClass={`w-[85%] sm:ml-[7.5%] md:ml-[0%] lg:w-[80%] lg:ml-[0%]`}
               removeArrowOnDeviceType={["tablet", "mobile"]}
               dotListClass="custom-dot-list-style"
               itemClass="carousel-item-padding-40-px"
             >
               <div className="px-[5px]">
                 <img
-                  className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
+                  className="h-[200px] w-[350px]"
                   src={require("../../assets/clinica/Imagem2.JPG")}
                   alt="paciente 1"
                 />
               </div>
               <div className="px-[5px]">
                 <img
-                  className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
+                  className="h-[200px] w-[350px]"
                   src={require("../../assets/marvelApi/Imagem1.JPG")}
                   alt="paciente 2"
                 />
               </div>
               <div className="px-[5px]">
                 <img
-                  className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
+                  className="h-[200px] w-[350px]"
                   src={require("../../assets/sistemaDeVagas/Imagem3.JPG")}
                   alt="paciente3"
                 />
               </div>
               <div className="px-[5px]">
                 <img
-                  className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
+                  className="h-[200px] w-[350px]"
                   src={require("../../assets/ossystem/TecnicosGet.JPG")}
                   alt="paciente 4"
                 />
               </div>
               <div className="px-[5px]">
                 <img
-                  className="h-[230px] w-[450px] sm:h-[200px] sm:w-[350px]"
+                  className="h-[200px] w-[350px]"
                   src={require("../../assets/crudRecados/Imagem5.JPG")}
                   alt="paciente 5"
                 />
