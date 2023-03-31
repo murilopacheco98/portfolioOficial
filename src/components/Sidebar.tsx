@@ -75,18 +75,18 @@ export const Sidebar = (props: SidebarProps) => {
       <div className="absolute h-[25px] w-[100%] flex justify-center bg-[#070419] text-white">
         Portfólio - Murilo Pacheco
       </div>
-      <div
+      {/* <div
         onClick={() => {
           setMenu && setMenu(true);
         }}
         className={
           on
-            ? "cursor-pointer text-black text-[40px] ml-[40px] z-10 mt-[70px] absolute md:hidden"
-            : "cursor-pointer text-white text-[40px] ml-[40px] z-10 mt-[70px] absolute md:hidden"
+            ? "cursor-pointer text-black text-[40px] ml-[40px absolute z-10 mt-[70px] md:hidden"
+            : "cursor-pointer text-white text-[40px] ml-[40px absolute z-10 mt-[70px] md:hidden"
         }
       >
         <AiOutlineMenu />
-      </div>
+      </div> */}
       {menu && (
         <div className="absolute z-20 bg-white mt-[25px] h-[calc(100vh-25px)] md:hidden">
           <div className="mt-[-25px]">

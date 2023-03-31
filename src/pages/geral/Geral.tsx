@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Abas } from "../../components/Abas";
 import { Sidebar } from "../../components/Sidebar";
+import { AiOutlineMenu } from "react-icons/ai";
 
 export const Geral = () => {
   const [on, setOn] = useState<boolean>();
@@ -21,7 +22,7 @@ export const Geral = () => {
         setMenu={setMenu}
       />
       <div
-        onClick={() => setMenu(false)}
+        onClick={() => menu && setMenu(false)}
         className={
           explorer
             ? `overflow-y-scroll relative mt-[25px] ${lightOn} ${textOn} h-[calc(100vh-25px)] bg-[#070419]`
@@ -29,8 +30,22 @@ export const Geral = () => {
         }
       >
         <Abas light={on} />
-        <div className="font-semibold flex justify-center mt-[20px] mb-[10px] text-[20px]">
+        <div className="flex">
+          <div
+            onClick={() => {
+              setMenu(true);
+            }}
+            className={
+              on
+                ? "w-[10%] cursor-pointer text-black text-[40px] ml-[30px] mt-[0px] md:hidden"
+                : "w-[10%] cursor-pointer text-white text-[40px] ml-[30px] mt-[0px] md:hidden"
+            }
+          >
+            <AiOutlineMenu />
+          </div>
+        <div className="w-[calc(80%-30px)] font-semibold flex justify-center mt-[20px] mb-[10px] text-[20px]">
           Sobre mim
+        </div>
         </div>
         <div className="font-light mx-[5vw] lg:mx-[10vw] text-[16px] lg:text-[18px] text-justify">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estou em transição de área, ao

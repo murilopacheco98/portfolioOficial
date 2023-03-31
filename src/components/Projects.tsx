@@ -209,7 +209,7 @@ export const Projects = (props: ProjectsProps) => {
             <>
               <div
                 onClick={() => {
-                  navigate("/projetos/sistema-de-vagas");
+                  navigate("/projetos/order-service");
                   abaPage({
                     id: 4,
                     name: "OrderService",
@@ -230,7 +230,7 @@ export const Projects = (props: ProjectsProps) => {
               </div>
               <div
                 onClick={() => {
-                  navigate("/projetos/sistema-de-vagas");
+                  navigate("/projetos/order-service");
                   abaPage({
                     id: 4,
                     name: "OrderService",
@@ -277,7 +277,7 @@ export const Projects = (props: ProjectsProps) => {
                 onClick={() => {
                   navigate("/projetos/sistema-de-vagas");
                   abaPage({
-                    id: 4,
+                    id: 5,
                     name: "SistemaDeVagas",
                     urlName: "sistema-de-vagas",
                     link: "/projetos/sistema-de-vagas",
@@ -298,7 +298,7 @@ export const Projects = (props: ProjectsProps) => {
                 onClick={() => {
                   navigate("/projetos/sistema-de-vagas");
                   abaPage({
-                    id: 4,
+                    id: 5,
                     name: "SistemaDeVagas",
                     urlName: "sistema-de-vagas",
                     link: "/projetos/sistema-de-vagas",

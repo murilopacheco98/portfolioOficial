@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import { Abas } from "../../../components/Abas";
 import { Sidebar } from "../../../components/Sidebar";
+import { AiOutlineMenu } from "react-icons/ai";
 
 export const Clinica = () => {
   const [on, setOn] = useState<boolean>();
@@ -22,7 +23,7 @@ export const Clinica = () => {
         setMenu={setMenu}
       />
       <div
-        onClick={() => setMenu(false)}
+        onClick={() => menu && setMenu(false)}
         className={
           explorer
             ? `overflow-y-scroll relative mt-[25px] ${textOn} ${lightOn} h-[calc(100vh-25px)] bg-[#070419]`
@@ -30,8 +31,22 @@ export const Clinica = () => {
         }
       >
         <Abas light={on} />
-        <div className="font-semibold flex justify-center mt-[20px] mb-[10px] text-[24px]">
-          Sistema de clínica
+        <div className="flex">
+          <div
+            onClick={() => {
+              setMenu(true);
+            }}
+            className={
+              on
+                ? "w-[10%] cursor-pointer text-black text-[40px] ml-[30px] mt-[0px] md:hidden"
+                : "w-[10%] cursor-pointer text-white text-[40px] ml-[30px] mt-[0px] md:hidden"
+            }
+          >
+            <AiOutlineMenu />
+          </div>
+          <div className="w-[calc(80%-30px)] font-semibold flex justify-center mt-[10px] mb-[10px] text-[24px]">
+            Sistema de clínica
+          </div>
         </div>
         <div className="mb-[40px] font-light mx-[5vw] lg:mx-[10vw] text-[16px] lg:text-[18px] text-justify">
           <div>
@@ -45,14 +60,14 @@ export const Clinica = () => {
               <Carousel fade>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/ImagemLogin.JPG")}
                     alt="login"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/ImagemCadastro.JPG")}
                     alt="cadastro"
                   />
@@ -75,56 +90,56 @@ export const Clinica = () => {
               <Carousel fade variant="dark">
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/Imagem1.JPG")}
                     alt="paciente 1"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/Imagem2.JPG")}
                     alt="paciente 2"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/Imagem3.JPG")}
                     alt="paciente3"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/Imagem4.JPG")}
                     alt="paciente 4"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/Imagem5.JPG")}
                     alt="paciente 5"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/Imagem6.JPG")}
                     alt="paciente 6"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/Imagem7.JPG")}
                     alt="paciente 7"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/Imagem8.JPG")}
                     alt="paciente 8"
                   />
@@ -142,28 +157,28 @@ export const Clinica = () => {
               <Carousel fade variant="dark">
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/ImagemMedico1.JPG")}
                     alt="medico 1"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/ImagemMedico2.JPG")}
                     alt="medico 2"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/ImagemMedico3.JPG")}
                     alt="medico 3"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/ImagemMedico4.JPG")}
                     alt="medico 4"
                   />
@@ -182,21 +197,21 @@ export const Clinica = () => {
               <Carousel fade variant="dark">
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/ImagemAdmin1.JPG")}
                     alt="admin 1"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/ImagemAdmin2.JPG")}
                     alt="admin 2"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/clinica/ImagemAdmin3.JPG")}
                     alt="admin 3"
                   />

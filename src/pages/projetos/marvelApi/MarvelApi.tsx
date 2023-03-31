@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Abas } from "../../../components/Abas";
 import { Sidebar } from "../../../components/Sidebar";
 import Carousel from "react-bootstrap/Carousel";
+import { AiOutlineMenu } from "react-icons/ai";
 
 export const MarvelApi = () => {
   const [on, setOn] = useState<boolean>();
@@ -23,6 +24,9 @@ export const MarvelApi = () => {
         setMenu={setMenu}
       />
       <div
+        onClick={() => {
+          menu && setMenu(false);
+        }}
         className={
           explorer
             ? `overflow-y-scroll relative mt-[25px] ${textOn} ${lightOn} h-[calc(100vh-25px)] bg-[#070419]`
@@ -30,18 +34,34 @@ export const MarvelApi = () => {
         }
       >
         <Abas light={on} />
-        <div className="font-semibold flex justify-center mt-[20px] mb-[20px] text-[24px]">
-          Marvel API
+        <div className="flex">
+          <div
+            onClick={() => {
+              setMenu(true);
+            }}
+            className={
+              on
+                ? "w-[10%] cursor-pointer text-black text-[40px] ml-[30px] mt-[0px] md:hidden"
+                : "w-[10%] cursor-pointer text-white text-[40px] ml-[30px] mt-[0px] md:hidden"
+            }
+          >
+            <AiOutlineMenu />
+          </div>
+          <div className="w-[calc(80%-30px)] font-semibold flex justify-center mt-[10px] mb-[20px] text-[24px]">
+            Marvel API
+          </div>
         </div>
         <div className="mb-[40px] font-light mx-[5vw] lg:ml-[10vw] lg:mr-[12vw] text-[16px] lg:text-[18px] text-justify">
-          Link do projeto:
-          <a
-            href="https://marvelmundo.netlify.app"
-            target="_blank"
-            rel="noreferrer"
-          >
-            marvelmundo.netlify.app
-          </a>
+          <div className="mb-[20px]">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link do projeto: &nbsp;
+            <a
+              href="https://marvelmundo.netlify.app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              marvelmundo.netlify.app
+            </a>
+          </div>
           <div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este projeto foi realizado utilizando
             a api disponibilizada pela marvel, no qual ela permite acessar os
@@ -54,14 +74,14 @@ export const MarvelApi = () => {
               <Carousel fade>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/marvelApi/Imagem1.JPG")}
                     alt="Página de entrada"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/marvelApi/Imagem2.JPG")}
                     alt="Menu"
                   />
@@ -82,21 +102,21 @@ export const MarvelApi = () => {
               <Carousel fade>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block  h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/marvelApi/Imagem3.JPG")}
                     alt="Cards seção pesquisada"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block  h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/marvelApi/Imagem4.JPG")}
                     alt="Cards pesquisados na barra de pesquisa"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/marvelApi/Imagem5.JPG")}
                     alt="Informações do card"
                   />
