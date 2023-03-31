@@ -82,7 +82,7 @@ export const Home = () => {
             : `font-serif flex w-[120px] md:w-[150px] text-center absolute ${text} text-[24px] z-10 ml-[93px] mt-[60px] md:mt-[20px] md:ml-[63px]`
         }
       >
-        <div className="hidden md:flex md:flex-col">
+        <div className="hidden md:flex ">
           <div className="mt-[20px] text-[24px] md:text-[30px]">
             <AiOutlineArrowLeft />
           </div>
