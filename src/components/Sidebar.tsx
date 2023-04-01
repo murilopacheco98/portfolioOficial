@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
 import { BsSun, BsFillSunFill } from "react-icons/bs";
 import { IoSettingsOutline } from "react-icons/io5";
 import { Tooltip } from "@mui/material";
@@ -22,7 +21,7 @@ interface SidebarProps {
 }
 
 export const Sidebar = (props: SidebarProps) => {
-  const { on, setOn, explorer, setExplorer, menu, setMenu } = props;
+  const { on, setOn, explorer, setExplorer, menu } = props;
   const dispatch = useAppDispatch();
 
   const [projects, setProjects] = useState<boolean>(true);

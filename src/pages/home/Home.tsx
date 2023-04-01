@@ -234,7 +234,9 @@ export const Home = () => {
               </div>
             </Carousel>
           </div>
-          <div className={`${text} text-center mt-[10px]`}>Imagem do front-end de alguns de meus projetos.</div>
+          <div className={`${text} text-center mt-[10px]`}>
+            Imagem do front-end de alguns de meus projetos.
+          </div>
         </div>
       </div>
     </div>

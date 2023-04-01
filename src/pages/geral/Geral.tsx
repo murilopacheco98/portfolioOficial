@@ -43,7 +43,7 @@ export const Geral = () => {
           >
             <AiOutlineMenu />
           </div>
-        <div className="w-[calc(80%-30px)] font-semibold flex justify-center mt-[20px] mb-[10px] text-[20px]">
+        <div className="w-[calc(80%-30px)] md:w-[100%] font-semibold flex justify-center mt-[10px] mb-[10px] text-[20px]">
           Sobre mim
         </div>
         </div>

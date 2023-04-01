@@ -46,7 +46,7 @@ export const CrudRecados = () => {
           >
             <AiOutlineMenu />
           </div>
-          <div className="w-[calc(80%-30px)] font-semibold flex justify-center mt-[10px] mb-[20px] text-[24px]">
+          <div className="w-[calc(80%-30px)] md:w-[100%] font-semibold flex justify-center mt-[10px] mb-[20px] text-[24px]">
             CRUD - Recados
           </div>
         </div>

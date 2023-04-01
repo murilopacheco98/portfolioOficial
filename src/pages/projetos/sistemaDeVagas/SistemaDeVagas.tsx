@@ -46,7 +46,7 @@ export const SistemaDeVagas = () => {
           >
             <AiOutlineMenu />
           </div>
-          <div className="w-[calc(80%-30px)] font-semibold flex justify-center mt-[10px] mb-[20px] text-[24px]">
+          <div className="w-[calc(80%-30px)] md:w-[100%] font-semibold flex justify-center mt-[10px] mb-[20px] text-[24px]">
             Sistema de vagas
           </div>
         </div>
@@ -61,14 +61,14 @@ export const SistemaDeVagas = () => {
               <Carousel fade>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/sistemaDeVagas/Imagem1.JPG")}
                     alt="Login"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/sistemaDeVagas/Imagem2.JPG")}
                     alt="Cadastro"
                   />
@@ -88,42 +88,42 @@ export const SistemaDeVagas = () => {
               <Carousel fade>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/sistemaDeVagas/Imagem3.JPG")}
                     alt="candidato 1"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/sistemaDeVagas/Imagem4.JPG")}
                     alt="candidato 2"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/sistemaDeVagas/Imagem5.JPG")}
                     alt="candidato 3"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/sistemaDeVagas/Imagem6.JPG")}
                     alt="candidato 4"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/sistemaDeVagas/Imagem8.JPG")}
                     alt="candidato 6"
                   />
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
                   <img
-                    className="d-block h-[400px]"
+                    className="d-block"
                     src={require("../../../assets/sistemaDeVagas/Imagem9.JPG")}
                     alt="candidato 7"
                   />

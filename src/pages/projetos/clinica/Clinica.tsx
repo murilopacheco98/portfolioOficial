@@ -44,7 +44,7 @@ export const Clinica = () => {
           >
             <AiOutlineMenu />
           </div>
-          <div className="w-[calc(80%-30px)] font-semibold flex justify-center mt-[10px] mb-[10px] text-[24px]">
+          <div className="w-[calc(80%-30px)] md:w-[100%] font-semibold flex justify-center mt-[10px] mb-[10px] text-[24px]">
             Sistema de clínica
           </div>
         </div>

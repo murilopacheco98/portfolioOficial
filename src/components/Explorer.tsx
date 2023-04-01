@@ -128,7 +128,7 @@ export const Explorer = (props: ExplorerProps) => {
               onClick={() => {
                 navigate("/geral");
                 abaPage({
-                  id: 5,
+                  id: 6,
                   name: "Geral",
                   urlName: "geral",
                   link: "/geral",
@@ -149,7 +149,7 @@ export const Explorer = (props: ExplorerProps) => {
               onClick={() => {
                 navigate("/conhecimentos");
                 abaPage({
-                  id: 6,
+                  id: 7,
                   name: "Conhecimentos",
                   urlName: "conhecimentos",
                   link: "/conhecimentos",
@@ -170,7 +170,7 @@ export const Explorer = (props: ExplorerProps) => {
               onClick={() => {
                 navigate("/formacao");
                 abaPage({
-                  id: 7,
+                  id: 8,
                   name: "Formacao",
                   urlName: "formacao",
                   link: "/formacao",
